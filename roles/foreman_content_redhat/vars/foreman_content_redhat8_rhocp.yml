@@ -1,0 +1,208 @@
+---
+# noqa: var-naming[no-role-prefix]
+
+foreman_content_credentials_redhat8_rhocp: []
+
+foreman_products_redhat8_rhocp:
+  # - name: Red Hat OpenShift Container Platform
+  #   organization: "{{ foreman_organization_redhat8_rhocp }}"
+  #   repository_sets:
+  #     # Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 RPMs
+  #     - name: Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 (RPMs)
+  #       # basearch: noarch
+  #       # label: rhocp-4.10-for-rhel-8-x86_64-rpms
+  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
+  #     # Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs
+  #     - name: Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 (RPMs)
+  #       # basearch: noarch
+  #       # label: rhocp-4.11-for-rhel-8-x86_64-rpms
+  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
+  #     # Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs
+  #     - name: Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 (RPMs)
+  #       # basearch: noarch
+  #       # label: rhocp-4.12-for-rhel-8-x86_64-rpms
+  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
+  #     # Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs
+  #     - name: Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 (RPMs)
+  #       # basearch: noarch
+  #       # label: rhocp-4.13-for-rhel-8-x86_64-rpms
+  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
+
+  #     # Logical Volume Manager Storage RPMs
+  #     - name: Logical Volume Manager Storage (RPMs)
+  #       # basearch: noarch
+  #       # label: lvms-4.12-for-rhel-8-x86_64-rpms
+  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
+  #     # Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 RPMs
+  #     - name: Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 (RPMs)
+  #       # basearch: noarch
+  #       # label: lvms-4.13-for-rhel-8-x86_64-rpms
+  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
+
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    all_repositories: true
+    labels:
+      # Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 RPMs
+      # Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 (RPMs)
+      - rhocp-4.10-for-rhel-8-x86_64-rpms
+      # Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs
+      # Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 (RPMs)
+      - rhocp-4.11-for-rhel-8-x86_64-rpms
+      # Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs
+      # Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 (RPMs)
+      - rhocp-4.12-for-rhel-8-x86_64-rpms
+      # Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs
+      # Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 (RPMs)
+      - rhocp-4.13-for-rhel-8-x86_64-rpms
+
+      # Logical Volume Manager Storage RPMs
+      # Logical Volume Manager Storage (RPMs)
+      - lvms-4.12-for-rhel-8-x86_64-rpms
+      # Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 RPMs
+      # Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 (RPMs)
+      - lvms-4.13-for-rhel-8-x86_64-rpms
+
+foreman_content_views_redhat8_rhocp:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_410"
+    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 RPMs"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_411"
+    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_412"
+    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_413"
+    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_412"
+    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Logical Volume Manager Storage RPMs"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_413"
+    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 RPMs"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+
+foreman_composite_content_views_redhat8_rhocp:
+  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_rhocp"
+    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    composite: True
+    allow_promote: "{{ foreman_ccv_allow_promote_redhat8_rhocp }}"
+    auto_publish: "{{ foreman_ccv_auto_publish_redhat8_rhocp }}"
+    components:
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_baseos"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_appstream"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_supplementary"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_client_6"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_29"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_410"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_411"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_412"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_413"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_412"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_413"
+        latest: true
+
+foreman_operatingsystems_redhat8_rhocp: []
+
+foreman_installation_media_redhat8_rhocp: []
+
+# Refer to https://access.redhat.com/solutions/125873 for pool ids
+foreman_activation_keys_defaults: &foreman_activation_keys_defaults
+  # lifecycle_environment: "Library"
+  # subscriptions:
+  #   # Example to use a pool id
+  #   # - pool_id: "8a88e9826db22df5016dd018abdd029b"
+  #   # - name: "Red Hat Ansible Engine"
+  #   # - name: "Red Hat Ansible Automation Platform"
+  #   # - name: "Red Hat Enterprise Linux for x86_64"
+  #   - name: "Red Hat Enterprise Linux Server"
+  #   # - name: "Red Hat Satellite"
+  #   # - name: "Red Hat Satellite Capsule"
+  #   # - name: "Red Hat Software Collections (for RHEL Server)"
+  #   # - name: "Red Hat OpenShift Container Platform"
+  #   - name: "Extra Packages for Enterprise Linux"
+  #   # - name: "Foreman"
+  auto_attach: False
+  release_version: 7Server
+  # service_level: Standard
+
+foreman_activation_keys_defaults_el8: &foreman_activation_keys_defaults_el8
+  <<: *foreman_activation_keys_defaults
+  # subscriptions:
+  #   - name: "Red Hat Ansible Engine"
+  #   - name: "Red Hat Enterprise Linux for x86_64"
+  #   - name: "Extra Packages for Enterprise Linux"
+  release_version: 8
+
+foreman_activation_keys_redhat8_rhocp:
+  - name: "{{ foreman_ak_prefix | default('ak_') }}{{ foreman_ak_name_prefix | default('') }}rhel8_rhocp"
+    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    content_view: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_rhocp"
+    <<: *foreman_activation_keys_defaults_el8
+    # subscriptions:
+    #   - name: "Red Hat Ansible Engine"
+    #   - name: "Red Hat Enterprise Linux for x86_64"
+    #   - name: "Red Hat OpenShift Container Platform"
+    content_overrides:
+      - label: rhel-8-for-x86_64-baseos-rpms
+        override: default
+      - label: rhel-8-for-x86_64-appstream-rpms
+        override: default
+      - label: rhel-8-for-x86_64-supplementary-rpms
+        override: default
+      - label: satellite-client-6-for-rhel-8-x86_64-rpms
+        override: default
+      - label: ansible-2-for-rhel-8-x86_64-rpms
+        override: default
+      - label: ansible-2.9-for-rhel-8-x86_64-rpms
+        override: default
+      - label: rhocp-4.10-for-rhel-8-x86_64-rpms
+        override: default
+      - label: rhocp-4.11-for-rhel-8-x86_64-rpms
+        override: default
+      - label: rhocp-4.12-for-rhel-8-x86_64-rpms
+        override: default
+      - label: rhocp-4.13-for-rhel-8-x86_64-rpms
+        override: default
+      - label: lvms-4.12-for-rhel-8-x86_64-rpms
+        override: default
+      - label: lvms-4.13-for-rhel-8-x86_64-rpms
+        override: default
+
+foreman_sync_plan_products_redhat8_rhocp:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+

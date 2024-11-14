@@ -1,0 +1,148 @@
+---
+# noqa: var-naming[no-role-prefix]
+
+foreman_content_credentials_redhat7_rhocp: []
+
+foreman_products_redhat7_rhocp:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat7_rhocp }}"
+    repository_sets:
+      # Red Hat OpenShift Container Platform 4.10 RPMs x86_64
+      - name: Red Hat OpenShift Container Platform 4.10 (RPMs)
+        basearch: x86_64
+        label: rhel-7-server-ose-4.10-rpms
+        organization: "{{ foreman_organization_redhat7_rhocp }}"
+      # Red Hat OpenShift Container Platform 4.11 RPMs x86_64
+      - name: Red Hat OpenShift Container Platform 4.11 (RPMs)
+        basearch: x86_64
+        label: rhel-7-server-ose-4.11-rpms
+        organization: "{{ foreman_organization_redhat7_rhocp }}"
+      # # Red Hat OpenShift Container Platform 4.12 RPMs x86_64
+      # - name: Red Hat OpenShift Container Platform 4.12 (RPMs)
+      #   basearch: x86_64
+      #   label: rhel-7-server-ose-4.12-rpms
+      #   organization: "{{ foreman_organization_redhat7_rhocp }}"
+
+foreman_content_views_redhat7_rhocp:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_rhocp_410"
+    organization: "{{ foreman_organization_redhat7_rhocp }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.10 RPMs x86_64"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat7_rhocp }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_rhocp_411"
+    organization: "{{ foreman_organization_redhat7_rhocp }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.11 RPMs x86_64"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat7_rhocp }}"
+  # - name: "{{ foreman_cv_prefix | default('cv_') }}rhel7_rhocp_412"
+  #   organization: "{{ foreman_organization_redhat7_rhocp }}"
+  #   repositories:
+  #     - name: Red Hat OpenShift Container Platform 4.12 RPMs x86_64
+  #       product: 'Red Hat OpenShift Container Platform'
+  #   allow_promote: "{{ foreman_cv_allow_promote_redhat7_rhocp }}"
+
+foreman_composite_content_views_redhat7_rhocp:
+  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel7_rhocp"
+    organization: "{{ foreman_organization_redhat7_rhocp }}"
+    composite: True
+    allow_promote: "{{ foreman_ccv_allow_promote_redhat7_rhocp }}"
+    auto_publish: "{{ foreman_ccv_auto_publish_redhat7_rhocp }}"
+    components:
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_base"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_extras"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_optional"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_supplementary"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_sat_client_6"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_rhscl"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_ansible_2"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_ansible_29"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_rhocp_410"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_rhocp_411"
+        latest: true
+      # - content_view: "{{ foreman_cv_prefix | default('cv_') }}rhel7_rhocp_412"
+      #   latest: true
+
+foreman_operatingsystems_redhat7_rhocp: []
+
+foreman_installation_media_redhat7_rhocp: []
+
+# Refer to https://access.redhat.com/solutions/125873 for pool ids
+foreman_activation_keys_defaults: &foreman_activation_keys_defaults
+  # lifecycle_environment: "Library"
+  # subscriptions:
+  #   # Example to uyse a pool id
+  #   # - pool_id: "8a88e9826db22df5016dd018abdd029b"
+  #   # - name: "Red Hat Ansible Engine"
+  #   # - name: "Red Hat Ansible Automation Platform"
+  #   # - name: "Red Hat Enterprise Linux for x86_64"
+  #   - name: "Red Hat Enterprise Linux Server"
+  #   # - name: "Red Hat Satellite"
+  #   # - name: "Red Hat Satellite Capsule"
+  #   # - name: "Red Hat Software Collections (for RHEL Server)"
+  #   # - name: "Red Hat OpenShift Container Platform"
+  #   - name: "Extra Packages for Enterprise Linux"
+  #   # - name: "Foreman"
+  auto_attach: False
+  release_version: 7Server
+  # service_level: Standard
+
+foreman_activation_keys_defaults_el7: &foreman_activation_keys_defaults_el7
+  <<: *foreman_activation_keys_defaults
+  # subscriptions:
+  #   - name: "Red Hat Ansible Engine"
+  #   - name: "Red Hat Enterprise Linux Server"
+  #   - name: "Red Hat Software Collections (for RHEL Server)"
+  #   - name: "Extra Packages for Enterprise Linux"
+  release_version: 7Server
+
+foreman_activation_keys_redhat7_rhocp:
+  - name: "{{ foreman_ak_prefix | default('ak_') }}{{ foreman_ak_name_prefix | default('') }}rhel7_rhocp"
+    organization: "{{ foreman_organization_redhat7_rhocp }}"
+    content_view: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel7_rhocp"
+    <<: *foreman_activation_keys_defaults_el7
+    # subscriptions:
+    #   - name: "Red Hat Ansible Engine"
+    #   - name: "Red Hat Enterprise Linux Server"
+    #   - name: "Red Hat Software Collections (for RHEL Server)"
+    #   - name: "Red Hat OpenShift Container Platform"
+    content_overrides:
+      - label: rhel-7-server-rpms
+        override: default
+      - label: rhel-7-server-extras-rpms
+        override: default
+      - label: rhel-7-server-optional-rpms
+        override: default
+      - label: rhel-7-server-supplementary-rpms
+        override: default
+      - label: rhel-7-server-satellite-client-6-rpms
+        override: default
+      - label: rhel-server-rhscl-7-rpms
+        override: default
+      - label: rhel-7-server-ansible-2-rpms
+        override: default
+      - label: rhel-7-server-ansible-2.9-rpms
+        override: default
+      - label: rhel-7-server-ose-4.10-rpms
+        override: default
+      - label: rhel-7-server-ose-4.11-rpms
+        override: default
+      # - label: rhel-7-server-ose-4.12-rpms
+      #   override: default
+
+foreman_sync_plan_products_redhat7_rhocp:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux Server
+  - Red Hat Software Collections (for RHEL Server)
+  - Red Hat OpenShift Container Platform
+

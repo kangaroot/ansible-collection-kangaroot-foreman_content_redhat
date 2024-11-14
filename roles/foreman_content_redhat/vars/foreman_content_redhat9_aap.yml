@@ -1,0 +1,111 @@
+---
+# noqa: var-naming[no-role-prefix]
+
+foreman_content_credentials_redhat9: []
+
+foreman_products_redhat9_aap:
+  - name: Red Hat Ansible Automation Platform
+    organization: "{{ foreman_organization_redhat9_aap }}"
+    repository_sets:
+      # Red Hat Ansible Automation Platform 2.2 for RHEL 9 x86_64
+      - name: Red Hat Ansible Automation Platform 2.2 for RHEL 8 x86_64 (RPMs)
+        # basearch: noarch
+        label: ansible-automation-platform-2.2-for-rhel-9-x86_64-rpms
+        organization: "{{ foreman_organization_redhat9_aap }}"
+      # Red Hat Ansible Automation Platform 2.3 for RHEL 9 x86_64
+      - name: Red Hat Ansible Automation Platform 2.3 for RHEL 8 x86_64 (RPMs)
+        # basearch: noarch
+        label: ansible-automation-platform-2.3-for-rhel-9-x86_64-rpms
+        organization: "{{ foreman_organization_redhat9_aap }}"
+
+foreman_content_views_redhat9_aap:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_22"
+    organization: "{{ foreman_organization_redhat9_aap }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Ansible Automation Platform 2.2 for RHEL 8 x86_64 RPMs"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Ansible Automation Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat9_aap }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_23"
+    organization: "{{ foreman_organization_redhat9_aap }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Ansible Automation Platform 2.3 for RHEL 8 x86_64 RPMs"
+        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Ansible Automation Platform'"
+    allow_promote: "{{ foreman_cv_allow_promote_redhat9_aap }}"
+
+foreman_composite_content_views_redhat9_aap:
+  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel9_aap"
+    organization: "{{ foreman_organization_redhat9_aap }}"
+    composite: True
+    allow_promote: "{{ foreman_ccv_allow_promote_redhat9_aap }}"
+    auto_publish: "{{ foreman_ccv_auto_publish_redhat9_aap }}"
+    components:
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_baseos"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_appstream"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_supplementary"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_client_6"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_22"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_23"
+        latest: true
+
+foreman_operatingsystems_redhat9_aap: []
+
+foreman_installation_media_redhat9_aap: []
+
+# Refer to https://access.redhat.com/solutions/125873 for pool ids
+foreman_activation_keys_defaults: &foreman_activation_keys_defaults
+  # lifecycle_environment: "Library"
+  # subscriptions:
+  #   # Example to uyse a pool id
+  #   # - pool_id: "8a88e9826db22df5016dd018abdd029b"
+  #   # - name: "Red Hat Ansible Engine"
+  #   # - name: "Red Hat Ansible Automation Platform"
+  #   # - name: "Red Hat Enterprise Linux for x86_64"
+  #   - name: "Red Hat Enterprise Linux Server"
+  #   # - name: "Red Hat Satellite"
+  #   # - name: "Red Hat Satellite Capsule"
+  #   # - name: "Red Hat Software Collections (for RHEL Server)"
+  #   # - name: "Red Hat OpenShift Container Platform"
+  #   - name: "Extra Packages for Enterprise Linux"
+  #   # - name: "Foreman"
+  auto_attach: False
+  release_version: 7Server
+  # service_level: Standard
+
+foreman_activation_keys_defaults_el9: &foreman_activation_keys_defaults_el9
+  <<: *foreman_activation_keys_defaults
+  # subscriptions:
+  #   - name: "Red Hat Enterprise Linux for x86_64"
+  #   - name: "Extra Packages for Enterprise Linux"
+  release_version: 9
+
+foreman_activation_keys_redhat9_aap:
+  - name: "{{ foreman_ak_prefix | default('ak_') }}{{ foreman_ak_name_prefix | default('') }}rhel9_aap"
+    organization: "{{ foreman_organization_redhat9_aap }}"
+    content_view: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel9_aap"
+    <<: *foreman_activation_keys_defaults_el9
+    # subscriptions:
+    #   - name: "Red Hat Ansible Automation Platform"
+    #   - name: "Red Hat Enterprise Linux for x86_64"
+    content_overrides:
+      - label: rhel-9-for-x86_64-baseos-rpms
+        override: default
+      - label: rhel-9-for-x86_64-appstream-rpms
+        override: default
+      - label: rhel-9-for-x86_64-supplementary-rpms
+        override: default
+      - label: satellite-client-6-for-rhel-9-x86_64-rpms
+        override: default
+      - label: ansible-automation-platform-2.2-for-rhel-9-x86_64-rpms
+        override: default
+      - label: ansible-automation-platform-2.3-for-rhel-9-x86_64-rpms
+        override: default
+
+foreman_sync_plan_products_redhat9_aap:
+  - Red Hat Ansible Automation Platform
+  - Red Hat Enterprise Linux for x86_64
+
