@@ -1710,7 +1710,7 @@ foreman_activation_keys_defaults: &foreman_activation_keys_defaults
   #   # - pool_id: "8a88e9826db22df5016dd018abdd029b"
   #   # - name: "Red Hat Ansible Engine"
   #   # - name: "Red Hat Ansible Automation Platform"
-  #   # - name: "Red Hat Enterprise Linux for x8664"
+  #   # - name: "Red Hat Enterprise Linux for x86_64"
   #   - name: "Red Hat Enterprise Linux Server"
   #   # - name: "Red Hat Satellite"
   #   # - name: "Red Hat Satellite Capsule"

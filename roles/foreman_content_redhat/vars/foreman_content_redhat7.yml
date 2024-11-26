@@ -256,7 +256,7 @@ foreman_operatingsystems_defaults: &foreman_operatingsystems_defaults
   os_family: "Redhat"
   password_hash: "SHA512"
   architectures:
-    - x8664
+    - x86_64
   # ptables:
   #   - Kickstart default
   #   - Kickstart custom
@@ -349,7 +349,7 @@ foreman_installation_media_defaults: &foreman_installation_media_defaults
 foreman_installation_media_redhat7: []
 # ENABLED IN VERSIONS!
 #   - name: RHEL 7.9
-#     path: "https://{{ foreman_server_hostname }}/pulp/content/{{ foreman_organization }}/Library/content/dist/rhel/server/7/7.9/x8664/kickstart/"
+#     path: "https://{{ foreman_server_hostname }}/pulp/content/{{ foreman_organization }}/Library/content/dist/rhel/server/7/7.9/x86_64/kickstart/"
 #     <<: *foreman_installation_media_defaults
 #     operatingsystems:
 #       - RHEL 7.9
@@ -364,7 +364,7 @@ foreman_activation_keys_defaults: &foreman_activation_keys_defaults
   #   # - pool_id: "8a88e9826db22df5016dd018abdd029b"
   #   # - name: "Red Hat Ansible Engine"
   #   # - name: "Red Hat Ansible Automation Platform"
-  #   # - name: "Red Hat Enterprise Linux for x8664"
+  #   # - name: "Red Hat Enterprise Linux for x86_64"
   #   - name: "Red Hat Enterprise Linux Server"
   #   # - name: "Red Hat Satellite"
   #   # - name: "Red Hat Satellite Capsule"
