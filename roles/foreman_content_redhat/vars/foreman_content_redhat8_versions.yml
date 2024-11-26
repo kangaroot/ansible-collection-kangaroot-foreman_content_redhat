@@ -472,220 +472,220 @@ foreman_content_views_redhat80:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel80_baseos"
     organization: "{{ foreman_organization_redhat80 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.0"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.0
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat80 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel80_appstream"
     organization: "{{ foreman_organization_redhat80 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.0"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.0
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat80 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel80_supplementary"
     organization: "{{ foreman_organization_redhat80 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.0"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.0
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat80 }}"
 
 foreman_content_views_redhat81:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel81_baseos"
     organization: "{{ foreman_organization_redhat81 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.1"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.1
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat81 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel81_appstream"
     organization: "{{ foreman_organization_redhat81 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.1"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.1
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat81 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel81_supplementary"
     organization: "{{ foreman_organization_redhat81 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.1"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.1
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat81 }}"
 
 foreman_content_views_redhat82:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel82_baseos"
     organization: "{{ foreman_organization_redhat82 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.2"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.2
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat82 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel82_appstream"
     organization: "{{ foreman_organization_redhat82 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.2"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.2
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat82 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel82_supplementary"
     organization: "{{ foreman_organization_redhat82 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.2"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.2
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat82 }}"
 
 foreman_content_views_redhat83:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel83_baseos"
     organization: "{{ foreman_organization_redhat83 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.3"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.3
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat83 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel83_appstream"
     organization: "{{ foreman_organization_redhat83 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.3"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.3
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat83 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel83_supplementary"
     organization: "{{ foreman_organization_redhat83 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.3"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.3
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat83 }}"
 
 foreman_content_views_redhat84:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel84_baseos"
     organization: "{{ foreman_organization_redhat84 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.4"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.4
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat84 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel84_appstream"
     organization: "{{ foreman_organization_redhat84 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.4"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.4
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat84 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel84_supplementary"
     organization: "{{ foreman_organization_redhat84 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.4"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.4
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat84 }}"
 
 foreman_content_views_redhat85:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel85_baseos"
     organization: "{{ foreman_organization_redhat85 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.5"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.5
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat85 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel85_appstream"
     organization: "{{ foreman_organization_redhat85 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.5"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.5
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat85 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel85_supplementary"
     organization: "{{ foreman_organization_redhat85 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.5"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.5
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat85 }}"
 
 foreman_content_views_redhat86:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel86_baseos"
     organization: "{{ foreman_organization_redhat86 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.6"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.6
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat86 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel86_appstream"
     organization: "{{ foreman_organization_redhat86 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.6"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.6
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat86 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel86_supplementary"
     organization: "{{ foreman_organization_redhat86 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.6"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.6
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat86 }}"
 
 foreman_content_views_redhat87:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel87_baseos"
     organization: "{{ foreman_organization_redhat87 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.7"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.7
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat87 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel87_appstream"
     organization: "{{ foreman_organization_redhat87 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.7"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.7
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat87 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel87_supplementary"
     organization: "{{ foreman_organization_redhat87 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.7"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.7
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat87 }}"
 
 foreman_content_views_redhat88:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel88_baseos"
     organization: "{{ foreman_organization_redhat88 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.8"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.8
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat88 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel88_appstream"
     organization: "{{ foreman_organization_redhat88 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.8"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.8
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat88 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel88_supplementary"
     organization: "{{ foreman_organization_redhat88 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.8"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.8
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat88 }}"
 
 foreman_content_views_redhat89:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel89_baseos"
     organization: "{{ foreman_organization_redhat89 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.9"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.9
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat89 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel89_appstream"
     organization: "{{ foreman_organization_redhat89 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.9"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.9
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat89 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel89_supplementary"
     organization: "{{ foreman_organization_redhat89 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.9"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.9
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat89 }}"
 
 foreman_content_views_redhat810:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel810_baseos"
     organization: "{{ foreman_organization_redhat810 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.10"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.10
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat810 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel810_appstream"
     organization: "{{ foreman_organization_redhat810 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.10"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.10
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat810 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel810_supplementary"
     organization: "{{ foreman_organization_redhat810 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.10"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8.10
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat810 }}"
 
 foreman_composite_content_views_redhat80:

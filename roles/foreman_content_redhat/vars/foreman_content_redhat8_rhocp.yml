@@ -1,142 +1,575 @@
 ---
 # noqa: var-naming[no-role-prefix]
 
-foreman_content_credentials_redhat8_rhocp: []
+foreman_content_credentials_redhat8_rhocp410: []
+foreman_content_credentials_redhat8_rhocp411: []
+foreman_content_credentials_redhat8_rhocp412: []
+foreman_content_credentials_redhat8_rhocp413: []
+foreman_content_credentials_redhat8_rhocp414: []
+foreman_content_credentials_redhat8_rhocp415: []
+foreman_content_credentials_redhat8_rhocp416: []
+foreman_content_credentials_redhat8_rhocp417: []
+foreman_content_credentials_redhat8_rhocp418: []
+foreman_content_credentials_redhat8_rhocp_lvms412: []
+foreman_content_credentials_redhat8_rhocp_lvms413: []
+foreman_content_credentials_redhat8_rhocp_lvms414: []
+foreman_content_credentials_redhat8_rhocp_ironic411: []
+foreman_content_credentials_redhat8_rhocp_ironic412: []
+foreman_content_credentials_redhat8_rhocp_ironic413: []
 
-foreman_products_redhat8_rhocp:
-  # - name: Red Hat OpenShift Container Platform
-  #   organization: "{{ foreman_organization_redhat8_rhocp }}"
-  #   repository_sets:
-  #     # Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 RPMs
-  #     - name: Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 (RPMs)
-  #       # basearch: noarch
-  #       # label: rhocp-4.10-for-rhel-8-x86_64-rpms
-  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
-  #     # Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs
-  #     - name: Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 (RPMs)
-  #       # basearch: noarch
-  #       # label: rhocp-4.11-for-rhel-8-x86_64-rpms
-  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
-  #     # Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs
-  #     - name: Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 (RPMs)
-  #       # basearch: noarch
-  #       # label: rhocp-4.12-for-rhel-8-x86_64-rpms
-  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
-  #     # Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs
-  #     - name: Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 (RPMs)
-  #       # basearch: noarch
-  #       # label: rhocp-4.13-for-rhel-8-x86_64-rpms
-  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_content_credentials_redhat8_rhocp_main: []
+foreman_content_credentials_redhat8_rhocp: "{{ ( foreman_content_credentials_redhat8_rhocp_main | default([]) if foreman_enable_redhat8_rhocp | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp410 | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp411 | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp412 | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp413 | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp414 | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp415 | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp416 | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp417 | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp418 | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp_lvms412 | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp_lvms413 | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp_lvms414 | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp_ironic411 | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp_ironic412 | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_rhocp_ironic413 | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+  }}"
 
-  #     # Logical Volume Manager Storage RPMs
-  #     - name: Logical Volume Manager Storage (RPMs)
-  #       # basearch: noarch
-  #       # label: lvms-4.12-for-rhel-8-x86_64-rpms
-  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
-  #     # Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 RPMs
-  #     - name: Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 (RPMs)
-  #       # basearch: noarch
-  #       # label: lvms-4.13-for-rhel-8-x86_64-rpms
-  #       organization: "{{ foreman_organization_redhat8_rhocp }}"
 
+# foreman_products_redhat8_rhocp:
+#   - name: Red Hat OpenShift Container Platform
+#     organization: "{{ foreman_organization_redhat8_rhocp }}"
+#     repository_sets:
+#       # Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 RPMs
+#       - name: Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 (RPMs)
+#         # basearch: noarch
+#         # label: rhocp-4.10-for-rhel-8-x86_64-rpms
+#         organization: "{{ foreman_organization_redhat8_rhocp }}"
+#       # Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs
+#       - name: Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 (RPMs)
+#         # basearch: noarch
+#         # label: rhocp-4.11-for-rhel-8-x86_64-rpms
+#         organization: "{{ foreman_organization_redhat8_rhocp }}"
+#       # Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs
+#       - name: Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 (RPMs)
+#         # basearch: noarch
+#         # label: rhocp-4.12-for-rhel-8-x86_64-rpms
+#         organization: "{{ foreman_organization_redhat8_rhocp }}"
+#       # Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs
+#       - name: Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 (RPMs)
+#         # basearch: noarch
+#         # label: rhocp-4.13-for-rhel-8-x86_64-rpms
+#         organization: "{{ foreman_organization_redhat8_rhocp }}"
+
+#       # Logical Volume Manager Storage RPMs
+#       - name: Logical Volume Manager Storage (RPMs)
+#         # basearch: noarch
+#         # label: lvms-4.12-for-rhel-8-x86_64-rpms
+#         organization: "{{ foreman_organization_redhat8_rhocp }}"
+#       # Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 RPMs
+#       - name: Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 (RPMs)
+#         # basearch: noarch
+#         # label: lvms-4.13-for-rhel-8-x86_64-rpms
+#         organization: "{{ foreman_organization_redhat8_rhocp }}"
+
+foreman_products_redhat8_rhocp410:
   - name: Red Hat OpenShift Container Platform
-    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    organization: "{{ foreman_organization_redhat8_rhocp410 }}"
     all_repositories: true
     labels:
       # Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 RPMs
       # Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 (RPMs)
       - rhocp-4.10-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp411:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp411 }}"
+    all_repositories: true
+    labels:
       # Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs
       # Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 (RPMs)
       - rhocp-4.11-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp412:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp412 }}"
+    all_repositories: true
+    labels:
       # Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs
       # Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 (RPMs)
       - rhocp-4.12-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp413:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp413 }}"
+    all_repositories: true
+    labels:
       # Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs
       # Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 (RPMs)
       - rhocp-4.13-for-rhel-8-x86_64-rpms
 
+foreman_products_redhat8_rhocp414:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp414 }}"
+    all_repositories: true
+    labels:
+      # Red Hat OpenShift Container Platform 4.14 for RHEL 8 x86_64 RPMs
+      # Red Hat OpenShift Container Platform 4.14 for RHEL 8 x86_64 (RPMs)
+      - rhocp-4.14-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp415:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp415 }}"
+    all_repositories: true
+    labels:
+      # Red Hat OpenShift Container Platform 4.15 for RHEL 8 x86_64 RPMs
+      # Red Hat OpenShift Container Platform 4.15 for RHEL 8 x86_64 (RPMs)
+      - rhocp-4.15-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp416:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp416 }}"
+    all_repositories: true
+    labels:
+      # Red Hat OpenShift Container Platform 4.16 for RHEL 8 x86_64 RPMs
+      # Red Hat OpenShift Container Platform 4.16 for RHEL 8 x86_64 (RPMs)
+      - rhocp-4.16-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp417:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp417 }}"
+    all_repositories: true
+    labels:
+      # Red Hat OpenShift Container Platform 4.17 for RHEL 8 x86_64 RPMs
+      # Red Hat OpenShift Container Platform 4.17 for RHEL 8 x86_64 (RPMs)
+      - rhocp-4.17-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp418:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp418 }}"
+    all_repositories: true
+    labels:
+      # Red Hat OpenShift Container Platform 4.18 for RHEL 8 x86_64 RPMs
+      # Red Hat OpenShift Container Platform 4.18 for RHEL 8 x86_64 (RPMs)
+      - rhocp-4.18-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp_lvms412:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp_lvms412 }}"
+    all_repositories: true
+    labels:
       # Logical Volume Manager Storage RPMs
       # Logical Volume Manager Storage (RPMs)
       - lvms-4.12-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp_lvms413:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp_lvms413 }}"
+    all_repositories: true
+    labels:
       # Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 RPMs
       # Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 (RPMs)
       - lvms-4.13-for-rhel-8-x86_64-rpms
 
-foreman_content_views_redhat8_rhocp:
+foreman_products_redhat8_rhocp_lvms414:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp_lvms414 }}"
+    all_repositories: true
+    labels:
+      # Logical Volume Manager Storage 4.14 for RHEL 8 x86_64 RPMs
+      # Logical Volume Manager Storage 4.14 for RHEL 8 x86_64 (RPMs)
+      - lvms-4.14-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp_ironic411:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp_ironic411 }}"
+    all_repositories: true
+    labels:
+      # Ironic content for Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs
+      # Ironic content for Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 (RPMs)
+      - rhocp-ironic-4.11-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp_ironic412:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp_ironic412 }}"
+    all_repositories: true
+    labels:
+      # Ironic content for Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs
+      # Ironic content for Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 (RPMs)
+      - rhocp-ironic-4.12-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp_ironic413:
+  - name: Red Hat OpenShift Container Platform
+    organization: "{{ foreman_organization_redhat8_rhocp_ironic413 }}"
+    all_repositories: true
+    labels:
+      # Ironic content for Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs
+      # Ironic content for Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 (RPMs)
+      - rhocp-ironic-4.13-for-rhel-8-x86_64-rpms
+
+foreman_products_redhat8_rhocp_main: []
+foreman_products_redhat8_rhocp: "{{ ( foreman_products_redhat8_rhocp_main | default([]) if foreman_enable_redhat8_rhocp | bool else [] ) |
+  union( foreman_products_redhat8_rhocp410 | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp411 | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp412 | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp413 | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp414 | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp415 | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp416 | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp417 | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp418 | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp_lvms412 | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp_lvms413 | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp_lvms414 | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp_ironic411 | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp_ironic412 | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+  union( foreman_products_redhat8_rhocp_ironic413 | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+  }}"
+
+
+foreman_content_views_redhat8_rhocp410:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_410"
-    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    organization: "{{ foreman_organization_redhat8_rhocp410 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+      - name: Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp410 }}"
+
+foreman_content_views_redhat8_rhocp411:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_411"
-    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    organization: "{{ foreman_organization_redhat8_rhocp411 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+      - name: Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp411 }}"
+
+foreman_content_views_redhat8_rhocp412:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_412"
-    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    organization: "{{ foreman_organization_redhat8_rhocp412 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+      - name: Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp412 }}"
+
+foreman_content_views_redhat8_rhocp413:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_413"
-    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    organization: "{{ foreman_organization_redhat8_rhocp413 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+      - name: Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp413 }}"
 
+foreman_content_views_redhat8_rhocp414:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_414"
+    organization: "{{ foreman_organization_redhat8_rhocp414 }}"
+    repositories:
+      - name: Red Hat OpenShift Container Platform 4.14 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp414 }}"
+
+foreman_content_views_redhat8_rhocp415:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_415"
+    organization: "{{ foreman_organization_redhat8_rhocp415 }}"
+    repositories:
+      - name: Red Hat OpenShift Container Platform 4.15 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp415 }}"
+
+foreman_content_views_redhat8_rhocp416:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_416"
+    organization: "{{ foreman_organization_redhat8_rhocp416 }}"
+    repositories:
+      - name: Red Hat OpenShift Container Platform 4.16 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp416 }}"
+
+foreman_content_views_redhat8_rhocp417:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_417"
+    organization: "{{ foreman_organization_redhat8_rhocp417 }}"
+    repositories:
+      - name: Red Hat OpenShift Container Platform 4.17 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp417 }}"
+
+foreman_content_views_redhat8_rhocp418:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_418"
+    organization: "{{ foreman_organization_redhat8_rhocp418 }}"
+    repositories:
+      - name: Red Hat OpenShift Container Platform 4.18 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp418 }}"
+
+foreman_content_views_redhat8_rhocp_lvms412:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_412"
-    organization: "{{ foreman_organization_redhat8_rhocp }}"
+    organization: "{{ foreman_organization_redhat8_rhocp_lvms412 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Logical Volume Manager Storage RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
-  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_413"
-    organization: "{{ foreman_organization_redhat8_rhocp }}"
-    repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp }}"
+      - name: Logical Volume Manager Storage RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp_lvms412 }}"
 
-foreman_composite_content_views_redhat8_rhocp:
+foreman_content_views_redhat8_rhocp_lvms413:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_413"
+    organization: "{{ foreman_organization_redhat8_rhocp_lvms413 }}"
+    repositories:
+      - name: Logical Volume Manager Storage 4.13 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp_lvms413 }}"
+
+foreman_content_views_redhat8_rhocp_lvms414:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_414"
+    organization: "{{ foreman_organization_redhat8_rhocp_lvms414 }}"
+    repositories:
+      - name: Logical Volume Manager Storage 4.14 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp_lvms414 }}"
+
+foreman_content_views_redhat8_rhocp_ironic411:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_ironic_411"
+    organization: "{{ foreman_organization_redhat8_rhocp_ironic411 }}"
+    repositories:
+      - name: Ironic content for Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp_ironic411 }}"
+
+foreman_content_views_redhat8_rhocp_ironic412:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_ironic_412"
+    organization: "{{ foreman_organization_redhat8_rhocp_ironic412 }}"
+    repositories:
+      - name: Ironic content for Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp_ironic412 }}"
+
+foreman_content_views_redhat8_rhocp_ironic413:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_ironic_413"
+    organization: "{{ foreman_organization_redhat8_rhocp_ironic413 }}"
+    repositories:
+      - name: Ironic content for Red Hat OpenShift Container Platform 4.13 for RHEL 8 x86_64 RPMs
+        product: Red Hat OpenShift Container Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_rhocp_ironic413 }}"
+
+foreman_content_views_redhat8_rhocp_main: []
+foreman_content_views_redhat8_rhocp: "{{ ( foreman_content_views_redhat8_rhocp_main | default([]) if foreman_enable_redhat8_rhocp | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp410 | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp411 | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp412 | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp413 | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp414 | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp415 | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp416 | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp417 | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp418 | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp_lvms412 | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp_lvms413 | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp_lvms414 | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp_ironic411 | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp_ironic412 | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+  union( foreman_content_views_redhat8_rhocp_ironic413 | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+  }}"
+
+
+foreman_composite_content_views_redhat8_rhocp410: []
+foreman_composite_content_views_redhat8_rhocp411: []
+foreman_composite_content_views_redhat8_rhocp412: []
+foreman_composite_content_views_redhat8_rhocp413: []
+foreman_composite_content_views_redhat8_rhocp414: []
+foreman_composite_content_views_redhat8_rhocp415: []
+foreman_composite_content_views_redhat8_rhocp416: []
+foreman_composite_content_views_redhat8_rhocp417: []
+foreman_composite_content_views_redhat8_rhocp418: []
+foreman_composite_content_views_redhat8_rhocp_lvms412: []
+foreman_composite_content_views_redhat8_rhocp_lvms413: []
+foreman_composite_content_views_redhat8_rhocp_lvms414: []
+foreman_composite_content_views_redhat8_rhocp_ironic411: []
+foreman_composite_content_views_redhat8_rhocp_ironic412: []
+foreman_composite_content_views_redhat8_rhocp_ironic413: []
+
+foreman_composite_content_views_redhat8_rhocp410_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_410"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp411_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_411"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp412_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_412"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp413_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_413"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp414_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_414"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp415_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_415"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp416_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_416"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp417_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_417"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp418_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_418"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp_lvms412_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_412"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp_lvms413_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_413"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp_lvms414_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_414"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp_ironic411_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_ironic_411"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp_ironic412_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_ironic_412"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp_ironic413_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_ironic_413"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp_main_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_baseos"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_appstream"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_supplementary"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_29"
+    latest: true
+
+foreman_composite_content_views_redhat8_rhocp_main:
   - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_rhocp"
     organization: "{{ foreman_organization_redhat8_rhocp }}"
     composite: True
     allow_promote: "{{ foreman_ccv_allow_promote_redhat8_rhocp }}"
     auto_publish: "{{ foreman_ccv_auto_publish_redhat8_rhocp }}"
-    components:
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_baseos"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_appstream"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_supplementary"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_client_6"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_29"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_410"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_411"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_412"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_413"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_412"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_rhocp_lvms_413"
-        latest: true
+    components: "{{ ( foreman_composite_content_views_redhat8_rhocp_main_components | default([]) if foreman_enable_redhat9_rhocp | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp410_components | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp411_components | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp412_components | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp413_components | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp414_components | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp415_components | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp416_components | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp417_components | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp418_components | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp_lvms412_components | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp_lvms413_components | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp_lvms414_components | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp_ironic411_components | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp_ironic412_components | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_rhocp_ironic413_components | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+    }}"
 
-foreman_operatingsystems_redhat8_rhocp: []
+foreman_composite_content_views_redhat8_rhocp: "{{ ( foreman_composite_content_views_redhat8_rhocp_main | default([]) if foreman_enable_redhat8_rhocp | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp410 | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp411 | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp412 | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp413 | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp414 | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp415 | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp416 | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp417 | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp418 | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp_lvms412 | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp_lvms413 | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp_lvms414 | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp_ironic411 | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp_ironic412 | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_rhocp_ironic413 | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+  }}"
 
-foreman_installation_media_redhat8_rhocp: []
+
+foreman_operatingsystems_redhat8_rhocp410: []
+foreman_operatingsystems_redhat8_rhocp411: []
+foreman_operatingsystems_redhat8_rhocp412: []
+foreman_operatingsystems_redhat8_rhocp413: []
+foreman_operatingsystems_redhat8_rhocp414: []
+foreman_operatingsystems_redhat8_rhocp415: []
+foreman_operatingsystems_redhat8_rhocp416: []
+foreman_operatingsystems_redhat8_rhocp417: []
+foreman_operatingsystems_redhat8_rhocp418: []
+foreman_operatingsystems_redhat8_rhocp_lvms412: []
+foreman_operatingsystems_redhat8_rhocp_lvms413: []
+foreman_operatingsystems_redhat8_rhocp_lvms414: []
+foreman_operatingsystems_redhat8_rhocp_ironic411: []
+foreman_operatingsystems_redhat8_rhocp_ironic412: []
+foreman_operatingsystems_redhat8_rhocp_ironic413: []
+
+foreman_operatingsystems_redhat8_rhocp_main: []
+foreman_operatingsystems_redhat8_rhocp: "{{ ( foreman_operatingsystems_redhat8_rhocp_main | default([]) if foreman_enable_redhat8_rhocp | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp410 | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp411 | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp412 | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp413 | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp414 | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp415 | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp416 | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp417 | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp418 | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp_lvms412 | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp_lvms413 | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp_lvms414 | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp_ironic411 | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp_ironic412 | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_rhocp_ironic413 | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+  }}"
+
+
+foreman_installation_media_redhat8_rhocp410: []
+foreman_installation_media_redhat8_rhocp411: []
+foreman_installation_media_redhat8_rhocp412: []
+foreman_installation_media_redhat8_rhocp413: []
+foreman_installation_media_redhat8_rhocp414: []
+foreman_installation_media_redhat8_rhocp415: []
+foreman_installation_media_redhat8_rhocp416: []
+foreman_installation_media_redhat8_rhocp417: []
+foreman_installation_media_redhat8_rhocp418: []
+foreman_installation_media_redhat8_rhocp_lvms412: []
+foreman_installation_media_redhat8_rhocp_lvms413: []
+foreman_installation_media_redhat8_rhocp_lvms414: []
+foreman_installation_media_redhat8_rhocp_ironic411: []
+foreman_installation_media_redhat8_rhocp_ironic412: []
+foreman_installation_media_redhat8_rhocp_ironic413: []
+
+foreman_installation_media_redhat8_rhocp_main: []
+foreman_installation_media_redhat8_rhocp: "{{ ( foreman_installation_media_redhat8_rhocp_main | default([]) if foreman_enable_redhat8_rhocp | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp410 | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp411 | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp412 | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp413 | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp414 | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp415 | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp416 | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp417 | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp418 | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp_lvms412 | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp_lvms413 | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp_lvms414 | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp_ironic411 | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp_ironic412 | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+  union( foreman_installation_media_redhat8_rhocp_ironic413 | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+  }}"
+
 
 # Refer to https://access.redhat.com/solutions/125873 for pool ids
 foreman_activation_keys_defaults: &foreman_activation_keys_defaults
@@ -166,7 +599,95 @@ foreman_activation_keys_defaults_el8: &foreman_activation_keys_defaults_el8
   #   - name: "Extra Packages for Enterprise Linux"
   release_version: 8
 
-foreman_activation_keys_redhat8_rhocp:
+foreman_activation_keys_redhat8_rhocp410: []
+foreman_activation_keys_redhat8_rhocp411: []
+foreman_activation_keys_redhat8_rhocp412: []
+foreman_activation_keys_redhat8_rhocp413: []
+foreman_activation_keys_redhat8_rhocp414: []
+foreman_activation_keys_redhat8_rhocp415: []
+foreman_activation_keys_redhat8_rhocp416: []
+foreman_activation_keys_redhat8_rhocp417: []
+foreman_activation_keys_redhat8_rhocp418: []
+foreman_activation_keys_redhat8_rhocp_lvms412: []
+foreman_activation_keys_redhat8_rhocp_lvms413: []
+foreman_activation_keys_redhat8_rhocp_lvms414: []
+foreman_activation_keys_redhat8_rhocp_ironic411: []
+foreman_activation_keys_redhat8_rhocp_ironic412: []
+foreman_activation_keys_redhat8_rhocp_ironic413: []
+
+foreman_activation_keys_redhat8_rhocp410_content_overrides:
+  - label: rhocp-4.10-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp411_content_overrides:
+  - label: rhocp-4.11-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp412_content_overrides:
+  - label: rhocp-4.12-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp413_content_overrides:
+  - label: rhocp-4.13-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp414_content_overrides:
+  - label: rhocp-4.14-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp415_content_overrides:
+  - label: rhocp-4.15-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp416_content_overrides:
+  - label: rhocp-4.16-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp417_content_overrides:
+  - label: rhocp-4.17-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp418_content_overrides:
+  - label: rhocp-4.18-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp_lvms412_content_overrides:
+  - label: lvms-4.12-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp_lvms413_content_overrides:
+  - label: lvms-4.13-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp_lvms414_content_overrides:
+  - label: lvms-4.14-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp_ironic411_content_overrides:
+  - label: rhocp-ironic-4.11-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp_ironic412_content_overrides:
+  - label: rhocp-ironic-4.12-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp_ironic413_content_overrides:
+  - label: rhocp-ironic-4.13-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp_main_content_overrides:
+  - label: rhel-8-for-x86_64-baseos-rpms
+    override: default
+  - label: rhel-8-for-x86_64-appstream-rpms
+    override: default
+  - label: rhel-8-for-x86_64-supplementary-rpms
+    override: default
+  - label: ansible-2-for-rhel-8-x86_64-rpms
+    override: default
+  - label: ansible-2.9-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_rhocp_main:
   - name: "{{ foreman_ak_prefix | default('ak_') }}{{ foreman_ak_name_prefix | default('') }}rhel8_rhocp"
     organization: "{{ foreman_organization_redhat8_rhocp }}"
     content_view: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_rhocp"
@@ -175,34 +696,134 @@ foreman_activation_keys_redhat8_rhocp:
     #   - name: "Red Hat Ansible Engine"
     #   - name: "Red Hat Enterprise Linux for x86_64"
     #   - name: "Red Hat OpenShift Container Platform"
-    content_overrides:
-      - label: rhel-8-for-x86_64-baseos-rpms
-        override: default
-      - label: rhel-8-for-x86_64-appstream-rpms
-        override: default
-      - label: rhel-8-for-x86_64-supplementary-rpms
-        override: default
-      - label: satellite-client-6-for-rhel-8-x86_64-rpms
-        override: default
-      - label: ansible-2-for-rhel-8-x86_64-rpms
-        override: default
-      - label: ansible-2.9-for-rhel-8-x86_64-rpms
-        override: default
-      - label: rhocp-4.10-for-rhel-8-x86_64-rpms
-        override: default
-      - label: rhocp-4.11-for-rhel-8-x86_64-rpms
-        override: default
-      - label: rhocp-4.12-for-rhel-8-x86_64-rpms
-        override: default
-      - label: rhocp-4.13-for-rhel-8-x86_64-rpms
-        override: default
-      - label: lvms-4.12-for-rhel-8-x86_64-rpms
-        override: default
-      - label: lvms-4.13-for-rhel-8-x86_64-rpms
-        override: default
+    content_overrides: "{{ ( foreman_activation_keys_redhat8_rhocp_main_content_overrides | default([]) if foreman_enable_redhat9_rhocp | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp410_content_overrides | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp411_content_overrides | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp412_content_overrides | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp413_content_overrides | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp414_content_overrides | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp415_content_overrides | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp416_content_overrides | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp417_content_overrides | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp418_content_overrides | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp_lvms412_content_overrides | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp_lvms413_content_overrides | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp_lvms414_content_overrides | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp_ironic411_content_overrides | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp_ironic412_content_overrides | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_rhocp_ironic413_content_overrides | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+    }}"
 
-foreman_sync_plan_products_redhat8_rhocp:
+foreman_activation_keys_redhat8_rhocp: "{{ ( foreman_activation_keys_redhat8_rhocp_main | default([]) if foreman_enable_redhat8_rhocp | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp410 | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp411 | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp412 | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp413 | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp414 | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp415 | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp416 | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp417 | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp418 | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp_lvms412 | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp_lvms413 | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp_lvms414 | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp_ironic411 | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp_ironic412 | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_rhocp_ironic413 | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+  }}"
+
+
+foreman_sync_plan_products_redhat8_rhocp410:
   - Red Hat Ansible Engine
   - Red Hat Enterprise Linux for x86_64
   - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp411:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp412:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp413:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp414:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp415:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp416:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp417:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp418:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp_lvms412:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp_lvms413:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp_lvms414:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp_ironic411:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp_ironic412:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp_ironic413:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat OpenShift Container Platform
+
+foreman_sync_plan_products_redhat8_rhocp_main: []
+foreman_sync_plan_products_redhat8_rhocp: "{{ ( foreman_sync_plan_products_redhat8_rhocp_main | default([]) if foreman_enable_redhat8_rhocp | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp410 | default([]) if foreman_enable_redhat8_rhocp410 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp411 | default([]) if foreman_enable_redhat8_rhocp411 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp412 | default([]) if foreman_enable_redhat8_rhocp412 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp413 | default([]) if foreman_enable_redhat8_rhocp413 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp414 | default([]) if foreman_enable_redhat8_rhocp414 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp415 | default([]) if foreman_enable_redhat8_rhocp415 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp416 | default([]) if foreman_enable_redhat8_rhocp416 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp417 | default([]) if foreman_enable_redhat8_rhocp417 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp418 | default([]) if foreman_enable_redhat8_rhocp418 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp_lvms412 | default([]) if foreman_enable_redhat8_rhocp_lvms412 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp_lvms413 | default([]) if foreman_enable_redhat8_rhocp_lvms413 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp_lvms414 | default([]) if foreman_enable_redhat8_rhocp_lvms414 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp_ironic411 | default([]) if foreman_enable_redhat8_rhocp_ironic411 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp_ironic412 | default([]) if foreman_enable_redhat8_rhocp_ironic412 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_rhocp_ironic413 | default([]) if foreman_enable_redhat8_rhocp_ironic413 | bool else [] )
+  }}"
 

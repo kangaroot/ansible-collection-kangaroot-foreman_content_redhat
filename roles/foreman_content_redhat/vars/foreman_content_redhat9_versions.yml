@@ -116,6 +116,29 @@ foreman_products_redhat94:
         # label: rhel-9-for-x86_64-supplementary-rpms
         organization: "{{ foreman_organization_redhat94 }}"
 
+foreman_products_redhat95:
+  - name: Red Hat Enterprise Linux for x86_64
+    organization: "{{ foreman_organization_redhat95 }}"
+    repository_sets:
+      # Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.5
+      - name: Red Hat Enterprise Linux 9 for x86_64 - BaseOS (RPMs)
+        # basearch: noarch
+        releasever: '9.5'
+        # label: rhel-9-for-x86_64-baseos-rpms
+        organization: "{{ foreman_organization_redhat95 }}"
+      # Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.5
+      - name: Red Hat Enterprise Linux 9 for x86_64 - AppStream (RPMs)
+        # basearch: noarch
+        releasever: '9.5'
+        # label: rhel-9-for-x86_64-appstream-rpms
+        organization: "{{ foreman_organization_redhat95 }}"
+      # Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.5
+      - name: Red Hat Enterprise Linux 9 for x86_64 - Supplementary (RPMs)
+        # basearch: noarch
+        releasever: '9.5'
+        # label: rhel-9-for-x86_64-supplementary-rpms
+        organization: "{{ foreman_organization_redhat95 }}"
+
 foreman_products_redhat90_kickstart:
   - name: Red Hat Enterprise Linux for x86_64
     organization: "{{ foreman_organization_redhat90_kickstart }}"
@@ -201,18 +224,37 @@ foreman_products_redhat94_kickstart:
         # label: rhel-9-for-x86_64-appstream-kickstart
         organization: "{{ foreman_organization_redhat94_kickstart }}"
 
+foreman_products_redhat95_kickstart:
+  - name: Red Hat Enterprise Linux for x86_64
+    organization: "{{ foreman_organization_redhat95_kickstart }}"
+    repository_sets:
+      # Red Hat Enterprise Linux 9 for x86_64 - BaseOS Kickstart 9.5
+      - name: Red Hat Enterprise Linux 9 for x86_64 - BaseOS (Kickstart)
+        # basearch: noarch
+        releasever: '9.5'
+        # label: rhel-9-for-x86_64-baseos-kickstart
+        organization: "{{ foreman_organization_redhat95_kickstart }}"
+      # Red Hat Enterprise Linux 9 for x86_64 - AppStream Kickstart 9.5
+      - name: Red Hat Enterprise Linux 9 for x86_64 - AppStream (Kickstart)
+        # basearch: noarch
+        releasever: '9.5'
+        # label: rhel-9-for-x86_64-appstream-kickstart
+        organization: "{{ foreman_organization_redhat95_kickstart }}"
+
 foreman_products_redhat9_versions: "{{ [] |
   union( foreman_products_redhat90 | default([]) if foreman_enable_redhat90 | bool else [] ) |
   union( foreman_products_redhat91 | default([]) if foreman_enable_redhat91 | bool else [] ) |
   union( foreman_products_redhat92 | default([]) if foreman_enable_redhat92 | bool else [] ) |
   union( foreman_products_redhat93 | default([]) if foreman_enable_redhat93 | bool else [] ) |
   union( foreman_products_redhat94 | default([]) if foreman_enable_redhat94 | bool else [] ) |
+  union( foreman_products_redhat95 | default([]) if foreman_enable_redhat95 | bool else [] ) |
 
   union( foreman_products_redhat90_kickstart | default([]) if foreman_enable_redhat90_kickstart | bool else [] ) |
   union( foreman_products_redhat91_kickstart | default([]) if foreman_enable_redhat91_kickstart | bool else [] ) |
   union( foreman_products_redhat92_kickstart | default([]) if foreman_enable_redhat92_kickstart | bool else [] ) |
   union( foreman_products_redhat93_kickstart | default([]) if foreman_enable_redhat93_kickstart | bool else [] ) |
-  union( foreman_products_redhat94_kickstart | default([]) if foreman_enable_redhat94_kickstart | bool else [] )
+  union( foreman_products_redhat94_kickstart | default([]) if foreman_enable_redhat94_kickstart | bool else [] ) |
+  union( foreman_products_redhat95_kickstart | default([]) if foreman_enable_redhat95_kickstart | bool else [] )
   }}"
 
 
@@ -220,101 +262,121 @@ foreman_content_views_redhat90:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel90_baseos"
     organization: "{{ foreman_organization_redhat90 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.0"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.0
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat90 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel90_appstream"
     organization: "{{ foreman_organization_redhat90 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.0"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.0
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat90 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel90_supplementary"
     organization: "{{ foreman_organization_redhat90 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.0"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.0
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat90 }}"
 
 foreman_content_views_redhat91:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel91_baseos"
     organization: "{{ foreman_organization_redhat91 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.1"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.1
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat91 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel91_appstream"
     organization: "{{ foreman_organization_redhat91 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.1"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.1
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat91 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel91_supplementary"
     organization: "{{ foreman_organization_redhat91 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.1"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.1
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat91 }}"
 
 foreman_content_views_redhat92:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel92_baseos"
     organization: "{{ foreman_organization_redhat92 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.2"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.2
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat92 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel92_appstream"
     organization: "{{ foreman_organization_redhat92 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.2"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.2
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat92 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel92_supplementary"
     organization: "{{ foreman_organization_redhat92 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.2"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.2
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat92 }}"
 
 foreman_content_views_redhat93:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel93_baseos"
     organization: "{{ foreman_organization_redhat93 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.3"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.3
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat93 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel93_appstream"
     organization: "{{ foreman_organization_redhat93 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.3"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.3
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat93 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel93_supplementary"
     organization: "{{ foreman_organization_redhat93 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.3"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.3
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat93 }}"
 
 foreman_content_views_redhat94:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel94_baseos"
     organization: "{{ foreman_organization_redhat94 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.4"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.4
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat94 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel94_appstream"
     organization: "{{ foreman_organization_redhat94 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.4"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.4
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat94 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel94_supplementary"
     organization: "{{ foreman_organization_redhat94 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.4"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.4
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat94 }}"
+
+foreman_content_views_redhat95:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel95_baseos"
+    organization: "{{ foreman_organization_redhat95 }}"
+    repositories:
+      - name: Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9.5
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat95 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel95_appstream"
+    organization: "{{ foreman_organization_redhat95 }}"
+    repositories:
+      - name: Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9.5
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat95 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel95_supplementary"
+    organization: "{{ foreman_organization_redhat95 }}"
+    repositories:
+      - name: Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9.5
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat95 }}"
 
 foreman_composite_content_views_redhat90:
   - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel90"
@@ -328,8 +390,6 @@ foreman_composite_content_views_redhat90:
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel90_appstream"
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel90_supplementary"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel90_sat_client_6"
         latest: true
 
 foreman_composite_content_views_redhat91:
@@ -345,8 +405,6 @@ foreman_composite_content_views_redhat91:
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel91_supplementary"
         latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel91_sat_client_6"
-        latest: true
 
 foreman_composite_content_views_redhat92:
   - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel92"
@@ -360,8 +418,6 @@ foreman_composite_content_views_redhat92:
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel92_appstream"
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel92_supplementary"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel92_sat_client_6"
         latest: true
 
 foreman_composite_content_views_redhat93:
@@ -377,8 +433,6 @@ foreman_composite_content_views_redhat93:
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel93_supplementary"
         latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel93_sat_client_6"
-        latest: true
 
 foreman_composite_content_views_redhat94:
   - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel94"
@@ -393,7 +447,19 @@ foreman_composite_content_views_redhat94:
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel94_supplementary"
         latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel94_sat_client_6"
+
+foreman_composite_content_views_redhat95:
+  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel95"
+    organization: "{{ foreman_organization_redhat95 }}"
+    composite: True
+    allow_promote: "{{ foreman_ccv_allow_promote_redhat95 }}"
+    auto_publish: "{{ foreman_ccv_auto_publish_redhat95 }}"
+    components:
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel95_baseos"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel95_appstream"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel95_supplementary"
         latest: true
 
 foreman_content_views_redhat9_versions: "{{ [] |
@@ -401,7 +467,8 @@ foreman_content_views_redhat9_versions: "{{ [] |
   union( foreman_content_views_redhat91 | default([]) if foreman_enable_redhat91 | bool else [] ) |
   union( foreman_content_views_redhat92 | default([]) if foreman_enable_redhat92 | bool else [] ) |
   union( foreman_content_views_redhat93 | default([]) if foreman_enable_redhat93 | bool else [] ) |
-  union( foreman_content_views_redhat94 | default([]) if foreman_enable_redhat94 | bool else [] )
+  union( foreman_content_views_redhat94 | default([]) if foreman_enable_redhat94 | bool else [] ) |
+  union( foreman_content_views_redhat95 | default([]) if foreman_enable_redhat95 | bool else [] )
   }}"
 
 foreman_composite_content_views_redhat9_versions: "{{ [] |
@@ -409,7 +476,8 @@ foreman_composite_content_views_redhat9_versions: "{{ [] |
   union( foreman_composite_content_views_redhat91 | default([]) if foreman_enable_redhat91 | bool and foreman_enable_redhat91_default_ccv | bool else [] ) |
   union( foreman_composite_content_views_redhat92 | default([]) if foreman_enable_redhat92 | bool and foreman_enable_redhat92_default_ccv | bool else [] ) |
   union( foreman_composite_content_views_redhat93 | default([]) if foreman_enable_redhat93 | bool and foreman_enable_redhat93_default_ccv | bool else [] ) |
-  union( foreman_composite_content_views_redhat94 | default([]) if foreman_enable_redhat94 | bool and foreman_enable_redhat94_default_ccv | bool else [] )
+  union( foreman_composite_content_views_redhat94 | default([]) if foreman_enable_redhat94 | bool and foreman_enable_redhat94_default_ccv | bool else [] ) |
+  union( foreman_composite_content_views_redhat95 | default([]) if foreman_enable_redhat95 | bool and foreman_enable_redhat95_default_ccv | bool else [] )
   }}"
 
 
@@ -418,7 +486,8 @@ foreman_operatingsystems_redhat9_versions: "{{ [] |
   union( foreman_operatingsystems_redhat91 | default([]) if foreman_enable_redhat91 | bool or foreman_enable_redhat91_kickstart | bool else [] ) |
   union( foreman_operatingsystems_redhat92 | default([]) if foreman_enable_redhat92 | bool or foreman_enable_redhat92_kickstart | bool else [] ) |
   union( foreman_operatingsystems_redhat93 | default([]) if foreman_enable_redhat93 | bool or foreman_enable_redhat93_kickstart | bool else [] ) |
-  union( foreman_operatingsystems_redhat94 | default([]) if foreman_enable_redhat94 | bool or foreman_enable_redhat94_kickstart | bool else [] )
+  union( foreman_operatingsystems_redhat94 | default([]) if foreman_enable_redhat94 | bool or foreman_enable_redhat94_kickstart | bool else [] ) |
+  union( foreman_operatingsystems_redhat95 | default([]) if foreman_enable_redhat95 | bool or foreman_enable_redhat95_kickstart | bool else [] )
   }}"
 
 
@@ -492,6 +561,19 @@ foreman_installation_media_redhat94:
     <<: *foreman_installation_media_defaults
     operatingsystems:
       - RHEL 9.4
+
+foreman_installation_media_redhat95:
+  - name: "{{ foreman_media_name_prefix | default('') }}RHEL 9.5 BaseOS"
+    path: "https://{{ foreman_server_hostname }}/pulp/content/{{ foreman_organization }}/Library/content/dist/rhel9/9.5/x86_64/baseos/kickstart/"
+    <<: *foreman_installation_media_defaults
+    operatingsystems:
+      - RHEL 9.5
+      - RHEL 9
+  - name: "{{ foreman_media_name_prefix | default('') }}RHEL 9.5 AppStream"
+    path: "https://{{ foreman_server_hostname }}/pulp/content/{{ foreman_organization }}/Library/content/dist/rhel9/9.5/x86_64/appstream/kickstart/"
+    <<: *foreman_installation_media_defaults
+    operatingsystems:
+      - RHEL 9.5
       - RHEL 9
 
 foreman_installation_media_redhat9_versions: "{{ [] |
@@ -499,7 +581,8 @@ foreman_installation_media_redhat9_versions: "{{ [] |
   union( foreman_installation_media_redhat91 | default([]) if foreman_enable_redhat91_kickstart | bool else [] ) |
   union( foreman_installation_media_redhat92 | default([]) if foreman_enable_redhat92_kickstart | bool else [] ) |
   union( foreman_installation_media_redhat93 | default([]) if foreman_enable_redhat93_kickstart | bool else [] ) |
-  union( foreman_installation_media_redhat94 | default([]) if foreman_enable_redhat94_kickstart | bool else [] )
+  union( foreman_installation_media_redhat94 | default([]) if foreman_enable_redhat94_kickstart | bool else [] ) |
+  union( foreman_installation_media_redhat95 | default([]) if foreman_enable_redhat95_kickstart | bool else [] )
   }}"
 
 
@@ -548,8 +631,6 @@ foreman_activation_keys_defaults_el9: &foreman_activation_keys_defaults_el9
 #         override: default
 #       - label: rhel-9-for-x86_64-supplementary-rpms
 #         override: default
-#       - label: satellite-client-6-for-rhel-9-x86_64-rpms
-#         override: default
 
 # foreman_activation_keys_redhat91:
 #   - name: ak_rhel91
@@ -562,8 +643,6 @@ foreman_activation_keys_defaults_el9: &foreman_activation_keys_defaults_el9
 #       - label: rhel-9-for-x86_64-appstream-rpms
 #         override: default
 #       - label: rhel-9-for-x86_64-supplementary-rpms
-#         override: default
-#       - label: satellite-client-6-for-rhel-9-x86_64-rpms
 #         override: default
 
 # foreman_activation_keys_redhat92:
@@ -578,8 +657,6 @@ foreman_activation_keys_defaults_el9: &foreman_activation_keys_defaults_el9
 #         override: default
 #       - label: rhel-9-for-x86_64-supplementary-rpms
 #         override: default
-#       - label: satellite-client-6-for-rhel-9-x86_64-rpms
-#         override: default
 
 # foreman_activation_keys_redhat93:
 #   - name: ak_rhel93
@@ -592,8 +669,6 @@ foreman_activation_keys_defaults_el9: &foreman_activation_keys_defaults_el9
 #       - label: rhel-9-for-x86_64-appstream-rpms
 #         override: default
 #       - label: rhel-9-for-x86_64-supplementary-rpms
-#         override: default
-#       - label: satellite-client-6-for-rhel-9-x86_64-rpms
 #         override: default
 
 # foreman_activation_keys_redhat94:
@@ -608,7 +683,18 @@ foreman_activation_keys_defaults_el9: &foreman_activation_keys_defaults_el9
 #         override: default
 #       - label: rhel-9-for-x86_64-supplementary-rpms
 #         override: default
-#       - label: satellite-client-6-for-rhel-9-x86_64-rpms
+
+# foreman_activation_keys_redhat95:
+#   - name: ak_rhel95
+#     organization: "{{ foreman_organization_redhat95 }}"
+#     content_view: "{{ foreman_ccv_prefix | default('ccv_') }}rhel95"
+#     <<: *foreman_activation_keys_defaults_el9
+#     content_overrides:
+#       - label: rhel-9-for-x86_64-baseos-rpms
+#         override: default
+#       - label: rhel-9-for-x86_64-appstream-rpms
+#         override: default
+#       - label: rhel-9-for-x86_64-supplementary-rpms
 #         override: default
 
 foreman_activation_keys_redhat9_versions: "{{ [] |
@@ -616,7 +702,8 @@ foreman_activation_keys_redhat9_versions: "{{ [] |
   union( foreman_activation_keys_redhat91 | default([]) if foreman_enable_redhat91 | bool and foreman_enable_redhat91_default_ak | bool else [] ) |
   union( foreman_activation_keys_redhat92 | default([]) if foreman_enable_redhat92 | bool and foreman_enable_redhat92_default_ak | bool else [] ) |
   union( foreman_activation_keys_redhat93 | default([]) if foreman_enable_redhat93 | bool and foreman_enable_redhat93_default_ak | bool else [] ) |
-  union( foreman_activation_keys_redhat94 | default([]) if foreman_enable_redhat94 | bool and foreman_enable_redhat94_default_ak | bool else [] )
+  union( foreman_activation_keys_redhat94 | default([]) if foreman_enable_redhat94 | bool and foreman_enable_redhat94_default_ak | bool else [] ) |
+  union( foreman_activation_keys_redhat95 | default([]) if foreman_enable_redhat95 | bool and foreman_enable_redhat95_default_ak | bool else [] )
   }}"
 
 
@@ -635,11 +722,15 @@ foreman_sync_plan_products_redhat93:
 foreman_sync_plan_products_redhat94:
   - Red Hat Enterprise Linux for x86_64
 
+foreman_sync_plan_products_redhat95:
+  - Red Hat Enterprise Linux for x86_64
+
 foreman_sync_plan_products_redhat9_versions: "{{ [] |
   union( foreman_sync_plan_products_redhat90 | default([]) if foreman_enable_redhat90 | bool or foreman_enable_redhat90_kickstart | bool else [] ) |
   union( foreman_sync_plan_products_redhat91 | default([]) if foreman_enable_redhat91 | bool or foreman_enable_redhat91_kickstart | bool else [] ) |
   union( foreman_sync_plan_products_redhat92 | default([]) if foreman_enable_redhat92 | bool or foreman_enable_redhat92_kickstart | bool else [] ) |
   union( foreman_sync_plan_products_redhat93 | default([]) if foreman_enable_redhat93 | bool or foreman_enable_redhat93_kickstart | bool else [] ) |
-  union( foreman_sync_plan_products_redhat94 | default([]) if foreman_enable_redhat94 | bool or foreman_enable_redhat94_kickstart | bool else [] )
+  union( foreman_sync_plan_products_redhat94 | default([]) if foreman_enable_redhat94 | bool or foreman_enable_redhat94_kickstart | bool else [] ) |
+  union( foreman_sync_plan_products_redhat95 | default([]) if foreman_enable_redhat95 | bool or foreman_enable_redhat95_kickstart | bool else [] )
   }}"
 

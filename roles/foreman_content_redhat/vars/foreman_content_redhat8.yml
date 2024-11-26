@@ -33,6 +33,12 @@ foreman_products_redhat8:
         # releasever: '8'
         # label: satellite-client-6-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8 }}"
+      # Red Hat Satellite 6 Client 2 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite 6 Client 2 for RHEL 8 x86_64 (RPMs)
+        basearch: x86_64
+        releasever: '8'
+        label: satellite-6-client-2-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8 }}"
 
       # Red Hat Satellite Tools 6.10 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Tools 6.10 for RHEL 8 x86_64 (RPMs)
@@ -58,6 +64,24 @@ foreman_products_redhat8:
         # releasever: '8'
         # label: satellite-utils-6.13-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8 }}"
+      # Red Hat Satellite Utils 6.14 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite Utils 6.14 for RHEL 8 x86_64 (RPMs)
+        # basearch: noarch
+        # releasever: '8'
+        # label: satellite-utils-6.14-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8 }}"
+      # Red Hat Satellite Utils 6.15 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite Utils 6.15 for RHEL 8 x86_64 (RPMs)
+        # basearch: noarch
+        # releasever: '8'
+        # label: satellite-utils-6.15-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8 }}"
+      # Red Hat Satellite Utils 6.16 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite Utils 6.16 for RHEL 8 x86_64 (RPMs)
+        # basearch: noarch
+        # releasever: '8'
+        # label: satellite-utils-6.16-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8 }}"
 
       # Red Hat Satellite Maintenance 6.11 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Maintenance 6.11 for RHEL 8 x86_64 (RPMs)
@@ -77,6 +101,24 @@ foreman_products_redhat8:
         # releasever: '8'
         # label: satellite-maintenance-6.13-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8 }}"
+      # Red Hat Satellite Maintenance 6.14 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite Maintenance 6.14 for RHEL 8 x86_64 (RPMs)
+        # basearch: x86_64
+        # releasever: '8'
+        # label: satellite-maintenance-6.14-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8 }}"
+      # Red Hat Satellite Maintenance 6.15 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite Maintenance 6.15 for RHEL 8 x86_64 (RPMs)
+        # basearch: x86_64
+        # releasever: '8'
+        # label: satellite-maintenance-6.15-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8 }}"
+      # Red Hat Satellite Maintenance 6.16 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite Maintenance 6.16 for RHEL 8 x86_64 (RPMs)
+        # basearch: x86_64
+        # releasever: '8'
+        # label: satellite-maintenance-6.16-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8 }}"
 
   - name: Red Hat Ansible Engine
     organization: "{{ foreman_organization_redhat8 }}"
@@ -91,90 +133,132 @@ foreman_products_redhat8:
         # basearch: noarch
         label: ansible-2.9-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8 }}"
-  
+
 
 foreman_content_views_redhat8:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_baseos"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_appstream"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_supplementary"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 8 for x86_64 - Supplementary RPMs 8
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
 
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_client_6"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Client 6 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Satellite Client 6 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_6_client_2"
+    organization: "{{ foreman_organization_redhat8 }}"
+    repositories:
+      - name: Red Hat Satellite 6 Client 2 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
 
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_tools_6_10"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Tools 6.10 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Satellite Tools 6.10 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_11"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Utils 6.11 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Satellite Utils 6.11 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_12"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Utils 6.12 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Satellite Utils 6.12 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_13"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Utils 6.13 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Satellite Utils 6.13 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_14"
+    organization: "{{ foreman_organization_redhat8 }}"
+    repositories:
+      - name: Red Hat Satellite Utils 6.14 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_15"
+    organization: "{{ foreman_organization_redhat8 }}"
+    repositories:
+      - name: Red Hat Satellite Utils 6.15 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_16"
+    organization: "{{ foreman_organization_redhat8 }}"
+    repositories:
+      - name: Red Hat Satellite Utils 6.16 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
 
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_11"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Maintenance 6.11 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Satellite Maintenance 6.11 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_12"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Maintenance 6.12 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Satellite Maintenance 6.12 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_13"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Maintenance 6.13 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Satellite Maintenance 6.13 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_14"
+    organization: "{{ foreman_organization_redhat8 }}"
+    repositories:
+      - name: Red Hat Satellite Maintenance 6.14 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_15"
+    organization: "{{ foreman_organization_redhat8 }}"
+    repositories:
+      - name: Red Hat Satellite Maintenance 6.15 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_16"
+    organization: "{{ foreman_organization_redhat8 }}"
+    repositories:
+      - name: Red Hat Satellite Maintenance 6.16 for RHEL 8 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
 
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Ansible Engine 2 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Ansible Engine'"
+      - name: Red Hat Ansible Engine 2 for RHEL 8 x86_64 RPMs
+        product: Red Hat Ansible Engine
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_29"
     organization: "{{ foreman_organization_redhat8 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Ansible Engine 2.9 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Ansible Engine'"
+      - name: Red Hat Ansible Engine 2.9 for RHEL 8 x86_64 RPMs
+        product: Red Hat Ansible Engine
     allow_promote: "{{ foreman_cv_allow_promote_redhat8 }}"
 
 foreman_composite_content_views_redhat8:
@@ -192,6 +276,8 @@ foreman_composite_content_views_redhat8:
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_client_6"
         latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_6_client_2"
+        latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_tools_6_10"
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_11"
@@ -200,11 +286,23 @@ foreman_composite_content_views_redhat8:
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_13"
         latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_14"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_15"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_utils_6_16"
+        latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_11"
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_12"
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_13"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_14"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_15"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_maint_6_16"
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
         latest: true
@@ -372,6 +470,8 @@ foreman_activation_keys_redhat8:
         override: default
       - label: satellite-client-6-for-rhel-8-x86_64-rpms
         override: default
+      - label: satellite-6-client-2-for-rhel-8-x86_64-rpms
+        override: default
       - label: satellite-tools-6.10-for-rhel-8-x86_64-rpms
         override: default
       - label: satellite-utils-6.11-for-rhel-8-x86_64-rpms
@@ -380,11 +480,23 @@ foreman_activation_keys_redhat8:
         override: default
       - label: satellite-utils-6.13-for-rhel-8-x86_64-rpms
         override: default
+      - label: satellite-utils-6.14-for-rhel-8-x86_64-rpms
+        override: default
+      - label: satellite-utils-6.15-for-rhel-8-x86_64-rpms
+        override: default
+      - label: satellite-utils-6.16-for-rhel-8-x86_64-rpms
+        override: default
       - label: satellite-maintenance-6.11-for-rhel-8-x86_64-rpms
         override: default
       - label: satellite-maintenance-6.12-for-rhel-8-x86_64-rpms
         override: default
-      - label: satellite-maintenance-6.12-for-rhel-8-x86_64-rpms
+      - label: satellite-maintenance-6.13-for-rhel-8-x86_64-rpms
+        override: default
+      - label: satellite-maintenance-6.14-for-rhel-8-x86_64-rpms
+        override: default
+      - label: satellite-maintenance-6.15-for-rhel-8-x86_64-rpms
+        override: default
+      - label: satellite-maintenance-6.16-for-rhel-8-x86_64-rpms
         override: default
       - label: ansible-2-for-rhel-8-x86_64-rpms
         override: default

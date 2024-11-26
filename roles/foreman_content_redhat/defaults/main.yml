@@ -1,6 +1,5 @@
 ---
 # noqa: var-naming[no-role-prefix]
-# defaults file for foreman_content_redhat
 
 #######################################
 ### URLS
@@ -270,8 +269,37 @@ foreman_enable_redhat89_default_ak: "{{ foreman_enable_redhat89_default_ccv | bo
 foreman_enable_redhat810_default_ak: "{{ foreman_enable_redhat810_default_ccv | bool }}"
 
 foreman_enable_redhat8_sat: false
+foreman_enable_redhat8_sat611: false
+foreman_enable_redhat8_sat612: false
+foreman_enable_redhat8_sat613: false
+foreman_enable_redhat8_sat614: false
+foreman_enable_redhat8_sat615: false
+foreman_enable_redhat8_sat616: "{{ foreman_enable_redhat8_sat | bool }}"
+
 foreman_enable_redhat8_aap: false
+foreman_enable_redhat8_aap21: false
+foreman_enable_redhat8_aap22: false
+foreman_enable_redhat8_aap23: false
+foreman_enable_redhat8_aap24: false
+foreman_enable_redhat8_aap25: "{{ foreman_enable_redhat8_aap | bool }}"
+foreman_enable_redhat8_aap_ah42: false
+
 foreman_enable_redhat8_rhocp: false
+foreman_enable_redhat8_rhocp410: false
+foreman_enable_redhat8_rhocp411: false
+foreman_enable_redhat8_rhocp412: false
+foreman_enable_redhat8_rhocp413: false
+foreman_enable_redhat8_rhocp414: false
+foreman_enable_redhat8_rhocp415: false
+foreman_enable_redhat8_rhocp416: false
+foreman_enable_redhat8_rhocp417: false
+foreman_enable_redhat8_rhocp418: "{{ foreman_enable_redhat8_rhocp | bool }}"
+foreman_enable_redhat8_rhocp_lvms412: false
+foreman_enable_redhat8_rhocp_lvms413: false
+foreman_enable_redhat8_rhocp_lvms414: "{{ foreman_enable_redhat8_rhocp | bool }}"
+foreman_enable_redhat8_rhocp_ironic411: false
+foreman_enable_redhat8_rhocp_ironic412: false
+foreman_enable_redhat8_rhocp_ironic413: "{{ foreman_enable_redhat8_rhocp | bool }}"
 
 foreman_enable_redhat8_aap_default_ccv: "{{ foreman_enable_redhat8_default_ccv | bool }}"
 foreman_enable_redhat8_rhocp_default_ccv: "{{ foreman_enable_redhat8_default_ccv | bool }}"
@@ -294,32 +322,65 @@ foreman_enable_redhat91: false
 foreman_enable_redhat92: false
 foreman_enable_redhat93: false
 foreman_enable_redhat94: false
+foreman_enable_redhat95: false
 
 foreman_enable_redhat90_kickstart: "{{ foreman_enable_redhat90 | bool }}"
 foreman_enable_redhat91_kickstart: "{{ foreman_enable_redhat91 | bool }}"
 foreman_enable_redhat92_kickstart: "{{ foreman_enable_redhat92 | bool }}"
 foreman_enable_redhat93_kickstart: "{{ foreman_enable_redhat93 | bool }}"
-foreman_enable_redhat94_kickstart: "{{ foreman_enable_redhat9_kickstart | bool or
-                                       foreman_enable_redhat94 | bool }}"
+foreman_enable_redhat94_kickstart: "{{ foreman_enable_redhat94 | bool }}"
+foreman_enable_redhat95_kickstart: "{{ foreman_enable_redhat9_kickstart | bool or
+                                       foreman_enable_redhat95 | bool }}"
 
 foreman_enable_redhat90_default_ccv: "{{ foreman_enable_redhat9_default_ccv | bool }}"
 foreman_enable_redhat91_default_ccv: "{{ foreman_enable_redhat9_default_ccv | bool }}"
 foreman_enable_redhat92_default_ccv: "{{ foreman_enable_redhat9_default_ccv | bool }}"
 foreman_enable_redhat93_default_ccv: "{{ foreman_enable_redhat9_default_ccv | bool }}"
 foreman_enable_redhat94_default_ccv: "{{ foreman_enable_redhat9_default_ccv | bool }}"
+foreman_enable_redhat95_default_ccv: "{{ foreman_enable_redhat9_default_ccv | bool }}"
 
 foreman_enable_redhat90_default_ak: "{{ foreman_enable_redhat90_default_ccv | bool }}"
 foreman_enable_redhat91_default_ak: "{{ foreman_enable_redhat91_default_ccv | bool }}"
 foreman_enable_redhat92_default_ak: "{{ foreman_enable_redhat92_default_ccv | bool }}"
 foreman_enable_redhat93_default_ak: "{{ foreman_enable_redhat93_default_ccv | bool }}"
 foreman_enable_redhat94_default_ak: "{{ foreman_enable_redhat94_default_ccv | bool }}"
+foreman_enable_redhat95_default_ak: "{{ foreman_enable_redhat95_default_ccv | bool }}"
+
+foreman_enable_redhat9_sat: false
+foreman_enable_redhat9_sat616: "{{ foreman_enable_redhat9_sat | bool }}"
 
 foreman_enable_redhat9_aap: false
-foreman_enable_redhat9_rhocp: false
+foreman_enable_redhat9_aap22: false
+foreman_enable_redhat9_aap23: false
+foreman_enable_redhat9_aap24: false
+foreman_enable_redhat9_aap25: "{{ foreman_enable_redhat9_aap | bool }}"
 
+foreman_enable_redhat9_rhocp: false
+foreman_enable_redhat9_rhocp412: false
+foreman_enable_redhat9_rhocp413: false
+foreman_enable_redhat9_rhocp414: false
+foreman_enable_redhat9_rhocp415: false
+foreman_enable_redhat9_rhocp416: false
+foreman_enable_redhat9_rhocp417: false
+foreman_enable_redhat9_rhocp418: "{{ foreman_enable_redhat9_rhocp | bool }}"
+foreman_enable_redhat9_rhocp_lvms414: false
+foreman_enable_redhat9_rhocp_lvms415: false
+foreman_enable_redhat9_rhocp_lvms416: false
+foreman_enable_redhat9_rhocp_lvms417: false
+foreman_enable_redhat9_rhocp_lvms418: "{{ foreman_enable_redhat9_rhocp | bool }}"
+foreman_enable_redhat9_rhocp_ironic412: false
+foreman_enable_redhat9_rhocp_ironic413: false
+foreman_enable_redhat9_rhocp_ironic414: false
+foreman_enable_redhat9_rhocp_ironic415: false
+foreman_enable_redhat9_rhocp_ironic416: false
+foreman_enable_redhat9_rhocp_ironic417: false
+foreman_enable_redhat9_rhocp_ironic418: "{{ foreman_enable_redhat9_rhocp | bool }}"
+
+foreman_enable_redhat9_sat_default_ccv: "{{ foreman_enable_redhat9_default_ccv | bool }}"
 foreman_enable_redhat9_aap_default_ccv: "{{ foreman_enable_redhat9_default_ccv | bool }}"
 foreman_enable_redhat9_rhocp_default_ccv: "{{ foreman_enable_redhat9_default_ccv | bool }}"
 
+foreman_enable_redhat9_sat_default_ak: "{{ foreman_enable_redhat9_sat_default_ccv | bool }}"
 foreman_enable_redhat9_aap_default_ak: "{{ foreman_enable_redhat9_aap_default_ccv | bool }}"
 foreman_enable_redhat9_rhocp_default_ak: "{{ foreman_enable_redhat9_rhocp_default_ccv | bool }}"
 
@@ -391,8 +452,37 @@ foreman_organization_redhat89_kickstart: "{{ foreman_organization_redhat8 }}"
 foreman_organization_redhat810_kickstart: "{{ foreman_organization_redhat8 }}"
 
 foreman_organization_redhat8_sat: "{{ foreman_organization_redhat8 }}"
+foreman_organization_redhat8_sat611: "{{ foreman_organization_redhat8_sat }}"
+foreman_organization_redhat8_sat612: "{{ foreman_organization_redhat8_sat }}"
+foreman_organization_redhat8_sat613: "{{ foreman_organization_redhat8_sat }}"
+foreman_organization_redhat8_sat614: "{{ foreman_organization_redhat8_sat }}"
+foreman_organization_redhat8_sat615: "{{ foreman_organization_redhat8_sat }}"
+foreman_organization_redhat8_sat616: "{{ foreman_organization_redhat8_sat }}"
+
 foreman_organization_redhat8_aap: "{{ foreman_organization_redhat8 }}"
+foreman_organization_redhat8_aap21: "{{ foreman_organization_redhat8_aap }}"
+foreman_organization_redhat8_aap22: "{{ foreman_organization_redhat8_aap }}"
+foreman_organization_redhat8_aap23: "{{ foreman_organization_redhat8_aap }}"
+foreman_organization_redhat8_aap24: "{{ foreman_organization_redhat8_aap }}"
+foreman_organization_redhat8_aap25: "{{ foreman_organization_redhat8_aap }}"
+foreman_organization_redhat8_aap_ah42: "{{ foreman_organization_redhat8_aap }}"
+
 foreman_organization_redhat8_rhocp: "{{ foreman_organization_redhat8 }}"
+foreman_organization_redhat8_rhocp410: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp411: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp412: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp413: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp414: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp415: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp416: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp417: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp418: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp_lvms412: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp_lvms413: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp_lvms414: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp_ironic411: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp_ironic412: "{{ foreman_organization_redhat8_rhocp }}"
+foreman_organization_redhat8_rhocp_ironic413: "{{ foreman_organization_redhat8_rhocp }}"
 
 ### REDHAT 9
 
@@ -403,15 +493,44 @@ foreman_organization_redhat91: "{{ foreman_organization_redhat9 }}"
 foreman_organization_redhat92: "{{ foreman_organization_redhat9 }}"
 foreman_organization_redhat93: "{{ foreman_organization_redhat9 }}"
 foreman_organization_redhat94: "{{ foreman_organization_redhat9 }}"
+foreman_organization_redhat95: "{{ foreman_organization_redhat9 }}"
 
 foreman_organization_redhat90_kickstart: "{{ foreman_organization_redhat9 }}"
 foreman_organization_redhat91_kickstart: "{{ foreman_organization_redhat9 }}"
 foreman_organization_redhat92_kickstart: "{{ foreman_organization_redhat9 }}"
 foreman_organization_redhat93_kickstart: "{{ foreman_organization_redhat9 }}"
 foreman_organization_redhat94_kickstart: "{{ foreman_organization_redhat9 }}"
+foreman_organization_redhat95_kickstart: "{{ foreman_organization_redhat9 }}"
+
+foreman_organization_redhat9_sat: "{{ foreman_organization_redhat9 }}"
+foreman_organization_redhat9_sat616: "{{ foreman_organization_redhat9_sat }}"
 
 foreman_organization_redhat9_aap: "{{ foreman_organization_redhat9 }}"
+foreman_organization_redhat9_aap22: "{{ foreman_organization_redhat9_aap }}"
+foreman_organization_redhat9_aap23: "{{ foreman_organization_redhat9_aap }}"
+foreman_organization_redhat9_aap24: "{{ foreman_organization_redhat9_aap }}"
+foreman_organization_redhat9_aap25: "{{ foreman_organization_redhat9_aap }}"
+
 foreman_organization_redhat9_rhocp: "{{ foreman_organization_redhat9 }}"
+foreman_organization_redhat9_rhocp412: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp413: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp414: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp415: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp416: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp417: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp418: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_lvms414: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_lvms415: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_lvms416: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_lvms417: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_lvms418: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_ironic412: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_ironic413: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_ironic414: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_ironic415: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_ironic416: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_ironic417: "{{ foreman_organization_redhat9_rhocp }}"
+foreman_organization_redhat9_rhocp_ironic418: "{{ foreman_organization_redhat9_rhocp }}"
 
 
 #######################################
@@ -536,13 +655,121 @@ foreman_cv_allow_promote_redhat8_sat: "{{ foreman_cv_allow_promote_redhat8 | boo
 foreman_ccv_allow_promote_redhat8_sat: "{{ foreman_ccv_allow_promote_redhat8 | bool }}"
 foreman_ccv_auto_publish_redhat8_sat: "{{ foreman_ccv_auto_publish_redhat8 | bool }}"
 
+foreman_cv_allow_promote_redhat8_sat611: "{{ foreman_cv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_allow_promote_redhat8_sat611: "{{ foreman_ccv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_auto_publish_redhat8_sat611: "{{ foreman_ccv_auto_publish_redhat8_sat | bool }}"
+
+foreman_cv_allow_promote_redhat8_sat612: "{{ foreman_cv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_allow_promote_redhat8_sat612: "{{ foreman_ccv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_auto_publish_redhat8_sat612: "{{ foreman_ccv_auto_publish_redhat8_sat | bool }}"
+
+foreman_cv_allow_promote_redhat8_sat613: "{{ foreman_cv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_allow_promote_redhat8_sat613: "{{ foreman_ccv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_auto_publish_redhat8_sat613: "{{ foreman_ccv_auto_publish_redhat8_sat | bool }}"
+
+foreman_cv_allow_promote_redhat8_sat614: "{{ foreman_cv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_allow_promote_redhat8_sat614: "{{ foreman_ccv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_auto_publish_redhat8_sat614: "{{ foreman_ccv_auto_publish_redhat8_sat | bool }}"
+
+foreman_cv_allow_promote_redhat8_sat615: "{{ foreman_cv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_allow_promote_redhat8_sat615: "{{ foreman_ccv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_auto_publish_redhat8_sat615: "{{ foreman_ccv_auto_publish_redhat8_sat | bool }}"
+
+foreman_cv_allow_promote_redhat8_sat616: "{{ foreman_cv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_allow_promote_redhat8_sat616: "{{ foreman_ccv_allow_promote_redhat8_sat | bool }}"
+foreman_ccv_auto_publish_redhat8_sat616: "{{ foreman_ccv_auto_publish_redhat8_sat | bool }}"
+
 foreman_cv_allow_promote_redhat8_aap: "{{ foreman_cv_allow_promote_redhat8 | bool }}"
 foreman_ccv_allow_promote_redhat8_aap: "{{ foreman_ccv_allow_promote_redhat8 | bool }}"
 foreman_ccv_auto_publish_redhat8_aap: "{{ foreman_ccv_auto_publish_redhat8 | bool }}"
 
+foreman_cv_allow_promote_redhat8_aap21: "{{ foreman_cv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_allow_promote_redhat8_aap21: "{{ foreman_ccv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_auto_publish_redhat8_aap21: "{{ foreman_ccv_auto_publish_redhat8_aap | bool }}"
+
+foreman_cv_allow_promote_redhat8_aap22: "{{ foreman_cv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_allow_promote_redhat8_aap22: "{{ foreman_ccv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_auto_publish_redhat8_aap22: "{{ foreman_ccv_auto_publish_redhat8_aap | bool }}"
+
+foreman_cv_allow_promote_redhat8_aap23: "{{ foreman_cv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_allow_promote_redhat8_aap23: "{{ foreman_ccv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_auto_publish_redhat8_aap23: "{{ foreman_ccv_auto_publish_redhat8_aap | bool }}"
+
+foreman_cv_allow_promote_redhat8_aap24: "{{ foreman_cv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_allow_promote_redhat8_aap24: "{{ foreman_ccv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_auto_publish_redhat8_aap24: "{{ foreman_ccv_auto_publish_redhat8_aap | bool }}"
+
+foreman_cv_allow_promote_redhat8_aap25: "{{ foreman_cv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_allow_promote_redhat8_aap25: "{{ foreman_ccv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_auto_publish_redhat8_aap25: "{{ foreman_ccv_auto_publish_redhat8_aap | bool }}"
+
+foreman_cv_allow_promote_redhat8_aap_ah42: "{{ foreman_cv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_allow_promote_redhat8_aap_ah42: "{{ foreman_ccv_allow_promote_redhat8_aap | bool }}"
+foreman_ccv_auto_publish_redhat8_aap_ah42: "{{ foreman_ccv_auto_publish_redhat8_aap | bool }}"
+
 foreman_cv_allow_promote_redhat8_rhocp: "{{ foreman_cv_allow_promote_redhat8 | bool }}"
 foreman_ccv_allow_promote_redhat8_rhocp: "{{ foreman_ccv_allow_promote_redhat8 | bool }}"
 foreman_ccv_auto_publish_redhat8_rhocp: "{{ foreman_ccv_auto_publish_redhat8 | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp410: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp410: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp410: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp411: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp411: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp411: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp412: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp412: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp412: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp413: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp413: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp413: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp414: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp414: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp414: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp415: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp415: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp415: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp416: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp416: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp416: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp417: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp417: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp417: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp418: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp418: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp418: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp_lvms412: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp_lvms412: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp_lvms412: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp_lvms413: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp_lvms413: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp_lvms413: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp_lvms414: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp_lvms414: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp_lvms414: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp_ironic411: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp_ironic411: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp_ironic411: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp_ironic412: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp_ironic412: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp_ironic412: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat8_rhocp_ironic413: "{{ foreman_cv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat8_rhocp_ironic413: "{{ foreman_ccv_allow_promote_redhat8_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat8_rhocp_ironic413: "{{ foreman_ccv_auto_publish_redhat8_rhocp | bool }}"
 
 ### REDHAT 9
 
@@ -570,13 +797,113 @@ foreman_cv_allow_promote_redhat94: "{{ foreman_cv_allow_promote_redhat9 | bool }
 foreman_ccv_allow_promote_redhat94: "{{ foreman_ccv_allow_promote_redhat9 | bool }}"
 foreman_ccv_auto_publish_redhat94: "{{ foreman_ccv_auto_publish_redhat9 | bool }}"
 
+foreman_cv_allow_promote_redhat9_sat: "{{ foreman_cv_allow_promote_redhat9 | bool }}"
+foreman_ccv_allow_promote_redhat9_sat: "{{ foreman_ccv_allow_promote_redhat9 | bool }}"
+foreman_ccv_auto_publish_redhat9_sat: "{{ foreman_ccv_auto_publish_redhat9 | bool }}"
+
+foreman_cv_allow_promote_redhat9_sat616: "{{ foreman_cv_allow_promote_redhat9_sat | bool }}"
+foreman_ccv_allow_promote_redhat9_sat616: "{{ foreman_ccv_allow_promote_redhat9_sat | bool }}"
+foreman_ccv_auto_publish_redhat9_sat616: "{{ foreman_ccv_auto_publish_redhat9_sat | bool }}"
+
 foreman_cv_allow_promote_redhat9_aap: "{{ foreman_cv_allow_promote_redhat9 | bool }}"
 foreman_ccv_allow_promote_redhat9_aap: "{{ foreman_ccv_allow_promote_redhat9 | bool }}"
 foreman_ccv_auto_publish_redhat9_aap: "{{ foreman_ccv_auto_publish_redhat9 | bool }}"
 
+foreman_cv_allow_promote_redhat9_aap22: "{{ foreman_cv_allow_promote_redhat9_aap | bool }}"
+foreman_ccv_allow_promote_redhat9_aap22: "{{ foreman_ccv_allow_promote_redhat9_aap | bool }}"
+foreman_ccv_auto_publish_redhat9_aap22: "{{ foreman_ccv_auto_publish_redhat9 | bool }}"
+
+foreman_cv_allow_promote_redhat9_aap23: "{{ foreman_cv_allow_promote_redhat9_aap | bool }}"
+foreman_ccv_allow_promote_redhat9_aap23: "{{ foreman_ccv_allow_promote_redhat9_aap | bool }}"
+foreman_ccv_auto_publish_redhat9_aap23: "{{ foreman_ccv_auto_publish_redhat9 | bool }}"
+
+foreman_cv_allow_promote_redhat9_aap24: "{{ foreman_cv_allow_promote_redhat9_aap | bool }}"
+foreman_ccv_allow_promote_redhat9_aap24: "{{ foreman_ccv_allow_promote_redhat9_aap | bool }}"
+foreman_ccv_auto_publish_redhat9_aap24: "{{ foreman_ccv_auto_publish_redhat9 | bool }}"
+
+foreman_cv_allow_promote_redhat9_aap25: "{{ foreman_cv_allow_promote_redhat9_aap | bool }}"
+foreman_ccv_allow_promote_redhat9_aap25: "{{ foreman_ccv_allow_promote_redhat9_aap | bool }}"
+foreman_ccv_auto_publish_redhat9_aap25: "{{ foreman_ccv_auto_publish_redhat9 | bool }}"
+
 foreman_cv_allow_promote_redhat9_rhocp: "{{ foreman_cv_allow_promote_redhat9 | bool }}"
 foreman_ccv_allow_promote_redhat9_rhocp: "{{ foreman_ccv_allow_promote_redhat9 | bool }}"
 foreman_ccv_auto_publish_redhat9_rhocp: "{{ foreman_ccv_auto_publish_redhat9 | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp412: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp412: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp412: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp413: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp413: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp413: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp414: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp414: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp414: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp415: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp415: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp415: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp416: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp416: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp416: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp417: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp417: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp417: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp418: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp418: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp418: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_lvms414: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_lvms414: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_lvms414: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_lvms415: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_lvms415: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_lvms415: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_lvms416: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_lvms416: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_lvms416: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_lvms417: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_lvms417: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_lvms417: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_lvms418: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_lvms418: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_lvms418: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_ironic412: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_ironic412: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_ironic412: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_ironic413: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_ironic413: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_ironic413: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_ironic414: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_ironic414: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_ironic414: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_ironic415: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_ironic415: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_ironic415: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_ironic416: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_ironic416: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_ironic416: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_ironic417: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_ironic417: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_ironic417: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
+
+foreman_cv_allow_promote_redhat9_rhocp_ironic418: "{{ foreman_cv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_allow_promote_redhat9_rhocp_ironic418: "{{ foreman_ccv_allow_promote_redhat9_rhocp | bool }}"
+foreman_ccv_auto_publish_redhat9_rhocp_ironic418: "{{ foreman_ccv_auto_publish_redhat9_rhocp | bool }}"
 
 
 #######################################
@@ -600,6 +927,7 @@ foreman_content_credentials_redhat: "{{ ( foreman_content_credentials_redhat_mai
 
   union( foreman_content_credentials_redhat9 | default([]) if foreman_enable_redhat9 | bool else [] ) |
   union( foreman_content_credentials_redhat9_versions | default([]) if foreman_enable_redhat9 | bool else [] ) |
+  union( foreman_content_credentials_redhat9_sat | default([]) if foreman_enable_redhat9_sat | bool else [] ) |
   union( foreman_content_credentials_redhat9_aap | default([]) if foreman_enable_redhat9_aap | bool else [] ) |
   union( foreman_content_credentials_redhat9_rhocp | default([]) if foreman_enable_redhat9_rhocp | bool else [] )
   }}"
@@ -624,6 +952,7 @@ foreman_products_redhat: "{{ ( foreman_products_redhat_main | default([]) if for
   union( foreman_products_redhat9 | default([]) if foreman_enable_redhat9 | bool else [] ) |
   union( foreman_products_redhat9_kickstart | default([]) if foreman_enable_redhat9_kickstart | bool else [] ) |
   union( foreman_products_redhat9_versions | default([]) if foreman_enable_redhat9 | bool else [] ) |
+  union( foreman_products_redhat9_sat | default([]) if foreman_enable_redhat9_sat | bool else [] ) |
   union( foreman_products_redhat9_aap | default([]) if foreman_enable_redhat9_aap | bool else [] ) |
   union( foreman_products_redhat9_rhocp | default([]) if foreman_enable_redhat9_rhocp | bool else [] )
   }}"
@@ -646,6 +975,7 @@ foreman_content_views_redhat: "{{ ( foreman_content_views_redhat_main | default(
 
   union( foreman_content_views_redhat9 | default([]) if foreman_enable_redhat9 | bool else [] ) |
   union( foreman_content_views_redhat9_versions | default([]) if foreman_enable_redhat9 | bool else [] ) |
+  union( foreman_content_views_redhat9_sat | default([]) if foreman_enable_redhat9_sat | bool else [] ) |
   union( foreman_content_views_redhat9_aap | default([]) if foreman_enable_redhat9_aap | bool else [] ) |
   union( foreman_content_views_redhat9_rhocp | default([]) if foreman_enable_redhat9_rhocp | bool else [] ) |
 
@@ -665,6 +995,7 @@ foreman_content_views_redhat: "{{ ( foreman_content_views_redhat_main | default(
 
   union( foreman_composite_content_views_redhat9 | default([]) if foreman_enable_redhat9 | bool and foreman_enable_redhat9_default_ccv | bool else [] ) |
   union( foreman_composite_content_views_redhat9_versions | default([]) if foreman_enable_redhat9 | bool else [] ) |
+  union( foreman_composite_content_views_redhat9_sat | default([]) if foreman_enable_redhat9_sat | bool and foreman_enable_redhat9_sat_default_ccv | bool else [] ) |
   union( foreman_composite_content_views_redhat9_aap | default([]) if foreman_enable_redhat9_aap | bool and foreman_enable_redhat9_aap_default_ccv | bool else [] ) |
   union( foreman_composite_content_views_redhat9_rhocp | default([]) if foreman_enable_redhat9_rhocp | bool and foreman_enable_redhat9_rhocp_default_ccv | bool else [] )
   }}"
@@ -721,6 +1052,7 @@ foreman_activation_keys_redhat: "{{ ( foreman_activation_keys_redhat_main | defa
 
   union( foreman_activation_keys_redhat9 | default([]) if foreman_enable_redhat9 | bool and foreman_enable_redhat9_default_ak | bool else [] ) |
   union( foreman_activation_keys_redhat9_versions | default([]) if foreman_enable_redhat9 | bool else [] ) |
+  union( foreman_activation_keys_redhat9_sat | default([]) if foreman_enable_redhat9_sat | bool and foreman_enable_redhat9_sat_default_ak | bool else [] ) |
   union( foreman_activation_keys_redhat9_aap | default([]) if foreman_enable_redhat9_aap | bool and foreman_enable_redhat9_aap_default_ak | bool else [] ) |
   union( foreman_activation_keys_redhat9_rhocp | default([]) if foreman_enable_redhat9_rhocp | bool and foreman_enable_redhat9_rhocp_default_ak | bool else [] )
   }}"
@@ -742,6 +1074,7 @@ foreman_sync_plan_products_redhat: "{{ ( foreman_sync_plan_products_redhat_main 
 
   union( foreman_sync_plan_products_redhat9 | default([]) if foreman_enable_redhat9 | bool or foreman_enable_redhat9_kickstart | bool else [] ) |
   union( foreman_sync_plan_products_redhat9_versions | default([]) if foreman_enable_redhat9 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat9_sat | default([]) if foreman_enable_redhat9_sat | bool else [] ) |
   union( foreman_sync_plan_products_redhat9_aap | default([]) if foreman_enable_redhat9_aap | bool else [] ) |
   union( foreman_sync_plan_products_redhat9_rhocp | default([]) if foreman_enable_redhat9_rhocp | bool else [] )
   }}"

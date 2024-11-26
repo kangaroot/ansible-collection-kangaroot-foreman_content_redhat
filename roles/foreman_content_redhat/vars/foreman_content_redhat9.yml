@@ -32,33 +32,72 @@ foreman_products_redhat9:
         # basearch: noarch
         # label: satellite-client-6-for-rhel-9-x86_64-rpms
         organization: "{{ foreman_organization_redhat9 }}"
+      # Red Hat Satellite 6 Client 2 for RHEL 9 x86_64 RPMs
+      - name: Red Hat Satellite 6 Client 2 for RHEL 9 x86_64 (RPMs)
+        # basearch: noarch
+        # label: satellite-6-client-2-for-rhel-9-x86_64-rpms
+        organization: "{{ foreman_organization_redhat9 }}"
+
+      # Red Hat Satellite Utils 6.16 for RHEL 9 x86_64 RPMs
+      - name: Red Hat Satellite Utils 6.16 for RHEL 9 x86_64 (RPMs)
+        # basearch: noarch
+        # releasever: '9'
+        # label: satellite-utils-6.16-for-rhel-9-x86_64-rpms
+        organization: "{{ foreman_organization_redhat9 }}"
+
+      # Red Hat Satellite Maintenance 6.16 for RHEL 9 x86_64 RPMs
+      - name: Red Hat Satellite Maintenance 6.16 for RHEL 9 x86_64 (RPMs)
+        # basearch: x86_64
+        # releasever: '9'
+        # label: satellite-maintenance-6.16-for-rhel-9-x86_64-rpms
+        organization: "{{ foreman_organization_redhat9 }}"
 
 
 foreman_content_views_redhat9:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_baseos"
     organization: "{{ foreman_organization_redhat9 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - BaseOS RPMs 9
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat9 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_appstream"
     organization: "{{ foreman_organization_redhat9 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat9 }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_supplementary"
     organization: "{{ foreman_organization_redhat9 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Enterprise Linux 9 for x86_64 - Supplementary RPMs 9
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat9 }}"
 
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_client_6"
     organization: "{{ foreman_organization_redhat9 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Client 6 for RHEL 9 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Enterprise Linux for x86_64'"
+      - name: Red Hat Satellite Client 6 for RHEL 9 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat9 }}"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_6_client_2"
+    organization: "{{ foreman_organization_redhat9 }}"
+    repositories:
+      - name: Red Hat Satellite 6 Client 2 for RHEL 9 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat9 }}"
+
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_utils_6_16"
+    organization: "{{ foreman_organization_redhat9 }}"
+    repositories:
+      - name: Red Hat Satellite Utils 6.16 for RHEL 9 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
+    allow_promote: "{{ foreman_cv_allow_promote_redhat9 }}"
+
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_maint_6_16"
+    organization: "{{ foreman_organization_redhat9 }}"
+    repositories:
+      - name: Red Hat Satellite Maintenance 6.16 for RHEL 9 x86_64 RPMs
+        product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat9 }}"
 
 foreman_composite_content_views_redhat9:
@@ -75,6 +114,12 @@ foreman_composite_content_views_redhat9:
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_supplementary"
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_client_6"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_6_client_2"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_utils_6_16"
+        latest: true
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_maint_6_16"
         latest: true
 
 
@@ -123,6 +168,12 @@ foreman_operatingsystems_redhat9:
     minor: "4"
     description: "RHEL 9.4"
     default_templates: "{{ foreman_operatingsystems_redhat94_default_templates | default( foreman_operatingsystems_redhat9_default_templates | default( foreman_operatingsystems_redhat_default_templates | default( foreman_operatingsystems_el_default_templates | default([]) ) ) ) }}"
+    <<: *foreman_operatingsystems_defaults
+  - name: "RedHat"
+    major: "9"
+    minor: "5"
+    description: "RHEL 9.5"
+    default_templates: "{{ foreman_operatingsystems_redhat95_default_templates | default( foreman_operatingsystems_redhat9_default_templates | default( foreman_operatingsystems_redhat_default_templates | default( foreman_operatingsystems_el_default_templates | default([]) ) ) ) }}"
     <<: *foreman_operatingsystems_defaults
   - name: "RedHat"
     major: "9"
@@ -200,6 +251,12 @@ foreman_activation_keys_redhat9:
       - label: rhel-9-for-x86_64-supplementary-rpms
         override: default
       - label: satellite-client-6-for-rhel-9-x86_64-rpms
+        override: default
+      - label: satellite-6-client-2-for-rhel-9-x86_64-rpms
+        override: default
+      - label: satellite-utils-6.16-for-rhel-9-x86_64-rpms
+        override: default
+      - label: satellite-maintenance-6.16-for-rhel-9-x86_64-rpms
         override: default
 
 

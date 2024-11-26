@@ -1,136 +1,391 @@
 ---
 # noqa: var-naming[no-role-prefix]
 
-foreman_content_credentials_redhat8_sat: []
+foreman_content_credentials_redhat8_sat611: []
+foreman_content_credentials_redhat8_sat612: []
+foreman_content_credentials_redhat8_sat613: []
+foreman_content_credentials_redhat8_sat614: []
+foreman_content_credentials_redhat8_sat615: []
+foreman_content_credentials_redhat8_sat616: []
 
-foreman_products_redhat8_sat:
+foreman_content_credentials_redhat8_sat_main: []
+foreman_content_credentials_redhat8_sat: "{{ ( foreman_content_credentials_redhat8_sat_main | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+  union( foreman_content_credentials_redhat8_sat611 | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_sat612 | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_sat613 | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_sat614 | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_sat615 | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_sat616 | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+  }}"
+
+foreman_products_redhat8_sat611:
   - name: Red Hat Satellite
-    organization: "{{ foreman_organization_redhat8_sat }}"
+    organization: "{{ foreman_organization_redhat8_sat611 }}"
     repository_sets:
       # Red Hat Satellite 6.11 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite 6.11 for RHEL 8 x86_64 (RPMs)
-        # basearch: x86_64
+        basearch: x86_64
         # label: satellite-6.11-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_sat }}"
-      # Red Hat Satellite 6.12 for RHEL 8 x86_64 RPMs
-      - name: Red Hat Satellite 6.12 for RHEL 8 x86_64 (RPMs)
-        # basearch: x86_64
-        # label: satellite-6.12-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_sat }}"
-      # Red Hat Satellite 6.13 for RHEL 8 x86_64 RPMs
-      - name: Red Hat Satellite 6.13 for RHEL 8 x86_64 (RPMs)
-        # basearch: x86_64
-        # label: satellite-6.13-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_sat }}"
+        organization: "{{ foreman_organization_redhat8_sat611 }}"
 
   - name: Red Hat Satellite Capsule
-    organization: "{{ foreman_organization_redhat8_sat }}"
+    organization: "{{ foreman_organization_redhat8_sat611 }}"
     repository_sets:
       # Red Hat Satellite Capsule 6.11 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Capsule 6.11 for RHEL 8 x86_64 (RPMs)
-        # basearch: x86_64
+        basearch: x86_64
         # label: satellite-capsule-6.11-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_sat }}"
+        organization: "{{ foreman_organization_redhat8_sat611 }}"
+
+foreman_products_redhat8_sat612:
+  - name: Red Hat Satellite
+    organization: "{{ foreman_organization_redhat8_sat612 }}"
+    repository_sets:
+      # Red Hat Satellite 6.12 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite 6.12 for RHEL 8 x86_64 (RPMs)
+        basearch: x86_64
+        # label: satellite-6.12-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_sat612 }}"
+
+  - name: Red Hat Satellite Capsule
+    organization: "{{ foreman_organization_redhat8_sat612 }}"
+    repository_sets:
       # Red Hat Satellite Capsule 6.12 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Capsule 6.12 for RHEL 8 x86_64 (RPMs)
-        # basearch: x86_64
+        basearch: x86_64
         # label: satellite-capsule-6.12-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_sat }}"
+        organization: "{{ foreman_organization_redhat8_sat612 }}"
+
+foreman_products_redhat8_sat613:
+  - name: Red Hat Satellite
+    organization: "{{ foreman_organization_redhat8_sat613 }}"
+    repository_sets:
+      # Red Hat Satellite 6.13 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite 6.13 for RHEL 8 x86_64 (RPMs)
+        basearch: x86_64
+        # label: satellite-6.13-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_sat613 }}"
+
+  - name: Red Hat Satellite Capsule
+    organization: "{{ foreman_organization_redhat8_sat613 }}"
+    repository_sets:
       # Red Hat Satellite Capsule 6.13 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Capsule 6.13 for RHEL 8 x86_64 (RPMs)
-        # basearch: x86_64
+        basearch: x86_64
         # label: satellite-capsule-6.13-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_sat }}"
+        organization: "{{ foreman_organization_redhat8_sat613 }}"
 
-foreman_content_views_redhat8_sat:
+foreman_products_redhat8_sat614:
+  - name: Red Hat Satellite
+    organization: "{{ foreman_organization_redhat8_sat614 }}"
+    repository_sets:
+      # Red Hat Satellite 6.14 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite 6.14 for RHEL 8 x86_64 (RPMs)
+        basearch: x86_64
+        # label: satellite-6.14-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_sat614 }}"
+
+  - name: Red Hat Satellite Capsule
+    organization: "{{ foreman_organization_redhat8_sat614 }}"
+    repository_sets:
+      # Red Hat Satellite Capsule 6.14 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite Capsule 6.14 for RHEL 8 x86_64 (RPMs)
+        basearch: x86_64
+        # label: satellite-capsule-6.14-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_sat614 }}"
+
+foreman_products_redhat8_sat615:
+  - name: Red Hat Satellite
+    organization: "{{ foreman_organization_redhat8_sat615 }}"
+    repository_sets:
+      # Red Hat Satellite 6.15 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite 6.15 for RHEL 8 x86_64 (RPMs)
+        basearch: x86_64
+        # label: satellite-6.15-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_sat615 }}"
+
+  - name: Red Hat Satellite Capsule
+    organization: "{{ foreman_organization_redhat8_sat615 }}"
+    repository_sets:
+      # Red Hat Satellite Capsule 6.15 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite Capsule 6.15 for RHEL 8 x86_64 (RPMs)
+        basearch: x86_64
+        # label: satellite-capsule-6.15-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_sat615 }}"
+
+foreman_products_redhat8_sat616:
+  - name: Red Hat Satellite
+    organization: "{{ foreman_organization_redhat8_sat616 }}"
+    repository_sets:
+      # Red Hat Satellite 6.16 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite 6.16 for RHEL 8 x86_64 (RPMs)
+        basearch: x86_64
+        # label: satellite-6.16-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_sat616 }}"
+
+  - name: Red Hat Satellite Capsule
+    organization: "{{ foreman_organization_redhat8_sat616 }}"
+    repository_sets:
+      # Red Hat Satellite Capsule 6.16 for RHEL 8 x86_64 RPMs
+      - name: Red Hat Satellite Capsule 6.16 for RHEL 8 x86_64 (RPMs)
+        basearch: x86_64
+        # label: satellite-capsule-6.16-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_sat616 }}"
+
+
+foreman_products_redhat8_sat_main: []
+foreman_products_redhat8_sat: "{{ ( foreman_products_redhat8_sat_main | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+  union( foreman_products_redhat8_sat611 | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+  union( foreman_products_redhat8_sat612 | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+  union( foreman_products_redhat8_sat613 | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+  union( foreman_products_redhat8_sat614 | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+  union( foreman_products_redhat8_sat615 | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+  union( foreman_products_redhat8_sat616 | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+  }}"
+
+
+foreman_content_views_redhat8_sat611:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_611"
-    organization: "{{ foreman_organization_redhat8_sat }}"
+    organization: "{{ foreman_organization_redhat8_sat611 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite 6.11 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Satellite'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat }}"
-  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_612"
-    organization: "{{ foreman_organization_redhat8_sat }}"
-    repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite 6.12 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Satellite'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat }}"
-  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_613"
-    organization: "{{ foreman_organization_redhat8_sat }}"
-    repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite 6.13 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Satellite'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat }}"
+      - name: Red Hat Satellite 6.11 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat611 }}"
 
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_611"
-    organization: "{{ foreman_organization_redhat8_sat }}"
+    organization: "{{ foreman_organization_redhat8_sat611 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Capsule 6.11 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Satellite Capsule'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat }}"
+      - name: Red Hat Satellite Capsule 6.11 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite Capsule
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat611 }}"
+
+foreman_content_views_redhat8_sat612:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_612"
+    organization: "{{ foreman_organization_redhat8_sat612 }}"
+    repositories:
+      - name: Red Hat Satellite 6.12 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat612 }}"
+
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_612"
-    organization: "{{ foreman_organization_redhat8_sat }}"
+    organization: "{{ foreman_organization_redhat8_sat612 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Capsule 6.12 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Satellite Capsule'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat }}"
+      - name: Red Hat Satellite Capsule 6.12 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite Capsule
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat612 }}"
+
+foreman_content_views_redhat8_sat613:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_613"
+    organization: "{{ foreman_organization_redhat8_sat613 }}"
+    repositories:
+      - name: Red Hat Satellite 6.13 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat613 }}"
+
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_613"
-    organization: "{{ foreman_organization_redhat8_sat }}"
+    organization: "{{ foreman_organization_redhat8_sat613 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Satellite Capsule 6.13 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Satellite Capsule'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat }}"
+      - name: Red Hat Satellite Capsule 6.13 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite Capsule
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat613 }}"
 
-foreman_composite_content_views_redhat8_sat:
-  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_satellite"
+foreman_content_views_redhat8_sat614:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_614"
+    organization: "{{ foreman_organization_redhat8_sat614 }}"
+    repositories:
+      - name: Red Hat Satellite 6.14 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat614 }}"
+
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_614"
+    organization: "{{ foreman_organization_redhat8_sat614 }}"
+    repositories:
+      - name: Red Hat Satellite Capsule 6.14 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite Capsule
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat614 }}"
+
+foreman_content_views_redhat8_sat615:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_615"
+    organization: "{{ foreman_organization_redhat8_sat615 }}"
+    repositories:
+      - name: Red Hat Satellite 6.15 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat615 }}"
+
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_615"
+    organization: "{{ foreman_organization_redhat8_sat615 }}"
+    repositories:
+      - name: Red Hat Satellite Capsule 6.15 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite Capsule
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat615 }}"
+
+foreman_content_views_redhat8_sat616:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_616"
+    organization: "{{ foreman_organization_redhat8_sat616 }}"
+    repositories:
+      - name: Red Hat Satellite 6.16 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat616 }}"
+
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_616"
+    organization: "{{ foreman_organization_redhat8_sat616 }}"
+    repositories:
+      - name: Red Hat Satellite Capsule 6.16 for RHEL 8 x86_64 RPMs
+        product: Red Hat Satellite Capsule
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_sat616 }}"
+
+foreman_content_views_redhat8_sat_main: []
+foreman_content_views_redhat8_sat: "{{ ( foreman_content_views_redhat8_sat_main | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+  union( foreman_content_views_redhat8_sat611 | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+  union( foreman_content_views_redhat8_sat612 | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+  union( foreman_content_views_redhat8_sat613 | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+  union( foreman_content_views_redhat8_sat614 | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+  union( foreman_content_views_redhat8_sat615 | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+  union( foreman_content_views_redhat8_sat616 | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+  }}"
+
+
+foreman_composite_content_views_redhat8_sat611: []
+foreman_composite_content_views_redhat8_sat612: []
+foreman_composite_content_views_redhat8_sat613: []
+foreman_composite_content_views_redhat8_sat614: []
+foreman_composite_content_views_redhat8_sat615: []
+foreman_composite_content_views_redhat8_sat616: []
+
+foreman_composite_content_views_redhat8_sat611_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_611"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat612_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_612"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat613_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_613"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat614_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_614"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat615_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_615"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat616_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_616"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat611_capsule_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_611"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat612_capsule_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_612"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat613_capsule_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_613"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat614_capsule_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_614"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat615_capsule_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_615"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat616_capsule_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_616"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat_main_compents:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_baseos"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_appstream"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_supplementary"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_29"
+    latest: true
+
+foreman_composite_content_views_redhat8_sat_main:
+  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_satellite_6_16"
     organization: "{{ foreman_organization_redhat8_sat }}"
     composite: True
     allow_promote: "{{ foreman_ccv_allow_promote_redhat8_sat }}"
     auto_publish: "{{ foreman_ccv_auto_publish_redhat8_sat }}"
-    components:
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_baseos"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_appstream"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_supplementary"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_29"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_611"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_612"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_613"
-        latest: true
+    components: "{{ ( foreman_composite_content_views_redhat8_sat_main_compents | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat611_compents | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat612_compents | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat613_compents | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat614_compents | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat615_compents | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat616_compents | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+    }}"
 
-  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_capsule"
+  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_capsule_6_16"
     organization: "{{ foreman_organization_redhat8_sat }}"
     composite: True
     allow_promote: "{{ foreman_ccv_allow_promote_redhat8_sat }}"
     auto_publish: "{{ foreman_ccv_auto_publish_redhat8_sat }}"
-    components:
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_baseos"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_appstream"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_supplementary"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_29"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_611"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_612"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_satellite_capsule_613"
-        latest: true
+    components: "{{ ( foreman_composite_content_views_redhat8_sat_main_compents | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat611_capsule_compents | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat612_capsule_compents | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat613_capsule_compents | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat614_capsule_compents | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat615_capsule_compents | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_sat616_capsule_compents | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+    }}"
 
-foreman_operatingsystems_redhat8_sat: []
+foreman_composite_content_views_redhat8_sat: "{{ ( foreman_composite_content_views_redhat8_sat_main | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_sat611 | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_sat612 | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_sat613 | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_sat614 | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_sat615 | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_sat616 | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+  }}"
 
-foreman_installation_media_redhat8_sat: []
+
+foreman_operatingsystems_redhat8_sat611: []
+foreman_operatingsystems_redhat8_sat612: []
+foreman_operatingsystems_redhat8_sat613: []
+foreman_operatingsystems_redhat8_sat614: []
+foreman_operatingsystems_redhat8_sat615: []
+foreman_operatingsystems_redhat8_sat616: []
+
+foreman_operatingsystems_redhat8_sat_main: []
+foreman_operatingsystems_redhat8_sat: "{{ ( foreman_operatingsystems_redhat8_sat_main | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_sat611 | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_sat612 | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_sat613 | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_sat614 | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_sat615 | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_sat616 | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+  }}"
+
+
+foreman_installation_media_redhat8_sat611: []
+foreman_installation_media_redhat8_sat612: []
+foreman_installation_media_redhat8_sat613: []
+foreman_installation_media_redhat8_sat614: []
+foreman_installation_media_redhat8_sat615: []
+foreman_installation_media_redhat8_sat616: []
+
+foreman_installation_media_redhat8_sat_main: []
+foreman_installation_media_redhat8_sat: "{{ ( foreman_installation_media_redhat8_sat_main | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+  union( foreman_installation_media_redhat8_sat611 | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+  union( foreman_installation_media_redhat8_sat612 | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+  union( foreman_installation_media_redhat8_sat613 | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+  union( foreman_installation_media_redhat8_sat614 | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+  union( foreman_installation_media_redhat8_sat615 | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+  union( foreman_installation_media_redhat8_sat616 | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+  }}"
+
 
 # Refer to https://access.redhat.com/solutions/125873 for pool ids
 foreman_activation_keys_defaults: &foreman_activation_keys_defaults
@@ -160,7 +415,74 @@ foreman_activation_keys_defaults_el8: &foreman_activation_keys_defaults_el8
   #   - name: "Extra Packages for Enterprise Linux"
   release_version: 8
 
-foreman_activation_keys_redhat8_sat:
+foreman_activation_keys_redhat8_sat611: []
+foreman_activation_keys_redhat8_sat612: []
+foreman_activation_keys_redhat8_sat613: []
+foreman_activation_keys_redhat8_sat614: []
+foreman_activation_keys_redhat8_sat615: []
+foreman_activation_keys_redhat8_sat616: []
+
+foreman_activation_keys_redhat8_sat611_content_overrides:
+  - label: satellite-6.11-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat612_content_overrides:
+  - label: satellite-6.12-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat613_content_overrides:
+  - label: satellite-6.13-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat614_content_overrides:
+  - label: satellite-6.14-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat615_content_overrides:
+  - label: satellite-6.15-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat616_content_overrides:
+  - label: satellite-6.16-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat611_capsule_content_overrides:
+  - label: satellite-capsule-6.11-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat612_capsule_content_overrides:
+  - label: satellite-capsule-6.12-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat613_capsule_content_overrides:
+  - label: satellite-capsule-6.13-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat614_capsule_content_overrides:
+  - label: satellite-capsule-6.14-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat615_capsule_content_overrides:
+  - label: satellite-capsule-6.15-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat616_capsule_content_overrides:
+  - label: satellite-capsule-6.16-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat_main_content_overrides:
+  - label: rhel-8-for-x86_64-baseos-rpms
+    override: default
+  - label: rhel-8-for-x86_64-appstream-rpms
+    override: default
+  - label: rhel-8-for-x86_64-supplementary-rpms
+    override: default
+  - label: ansible-2-for-rhel-8-x86_64-rpms
+    override: default
+  - label: ansible-2.9-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_sat_main:
   - name: "{{ foreman_ak_prefix | default('ak_') }}{{ foreman_ak_name_prefix | default('') }}rhel8_satellite"
     organization: "{{ foreman_organization_redhat8_sat }}"
     content_view: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_satellite"
@@ -169,23 +491,14 @@ foreman_activation_keys_redhat8_sat:
     #   - name: "Red Hat Ansible Engine"
     #   - name: "Red Hat Enterprise Linux for x86_64"
     #   - name: "Red Hat Satellite"
-    content_overrides:
-      - label: rhel-8-for-x86_64-baseos-rpms
-        override: default
-      - label: rhel-8-for-x86_64-appstream-rpms
-        override: default
-      - label: rhel-8-for-x86_64-supplementary-rpms
-        override: default
-      - label: ansible-2-for-rhel-8-x86_64-rpms
-        override: default
-      - label: ansible-2.9-for-rhel-8-x86_64-rpms
-        override: default
-      - label: satellite-6.11-for-rhel-8-x86_64-rpms
-        override: default
-      - label: satellite-6.12-for-rhel-8-x86_64-rpms
-        override: default
-      - label: satellite-6.13-for-rhel-8-x86_64-rpms
-        override: default
+    content_overrides: "{{ ( foreman_activation_keys_redhat8_sat_main_content_overrides | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat611_content_overrides | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat612_content_overrides | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat613_content_overrides | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat614_content_overrides | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat615_content_overrides | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat616_content_overrides | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+    }}"
 
   - name: "{{ foreman_ak_prefix | default('ak_') }}{{ foreman_ak_name_prefix | default('') }}rhel8_capsule"
     organization: "{{ foreman_organization_redhat8_sat }}"
@@ -194,28 +507,69 @@ foreman_activation_keys_redhat8_sat:
     # subscriptions:
     #   - name: "Red Hat Ansible Engine"
     #   - name: "Red Hat Enterprise Linux for x86_64"
-    #   - name: "Red Hat Satellite Capsule"
-    content_overrides:
-      - label: rhel-8-for-x86_64-baseos-rpms
-        override: default
-      - label: rhel-8-for-x86_64-appstream-rpms
-        override: default
-      - label: rhel-8-for-x86_64-supplementary-rpms
-        override: default
-      - label: ansible-2-for-rhel-8-x86_64-rpms
-        override: default
-      - label: ansible-2.9-for-rhel-8-x86_64-rpms
-        override: default
-      - label: satellite-capsule-6.11-for-rhel-8-x86_64-rpms
-        override: default
-      - label: satellite-capsule-6.12-for-rhel-8-x86_64-rpms
-        override: default
-      - label: satellite-capsule-6.13-for-rhel-8-x86_64-rpms
-        override: default
+    #   - name: "Red Hat Satellite"
+    content_overrides: "{{ ( foreman_activation_keys_redhat8_sat_main_content_overrides | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat611_capsule_content_overrides | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat612_capsule_content_overrides | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat613_capsule_content_overrides | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat614_capsule_content_overrides | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat615_capsule_content_overrides | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_sat616_capsule_content_overrides | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+    }}"
 
-foreman_sync_plan_products_redhat8_sat:
+foreman_activation_keys_redhat8_sat: "{{ ( foreman_activation_keys_redhat8_sat_main | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+  union( foreman_activation_keys_redhat8_sat611 | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_sat612 | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_sat613 | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_sat614 | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_sat615 | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_sat616 | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+  }}"
+
+
+foreman_sync_plan_products_redhat8_sat611:
   - Red Hat Ansible Engine
   - Red Hat Enterprise Linux for x86_64
   - Red Hat Satellite
   - Red Hat Satellite Capsule
+
+foreman_sync_plan_products_redhat8_sat612:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat Satellite
+  - Red Hat Satellite Capsule
+
+foreman_sync_plan_products_redhat8_sat613:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat Satellite
+  - Red Hat Satellite Capsule
+
+foreman_sync_plan_products_redhat8_sat614:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat Satellite
+  - Red Hat Satellite Capsule
+
+foreman_sync_plan_products_redhat8_sat615:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat Satellite
+  - Red Hat Satellite Capsule
+
+foreman_sync_plan_products_redhat8_sat616:
+  - Red Hat Ansible Engine
+  - Red Hat Enterprise Linux for x86_64
+  - Red Hat Satellite
+  - Red Hat Satellite Capsule
+
+foreman_sync_plan_products_redhat8_sat_main: []
+foreman_sync_plan_products_redhat8_sat: "{{ ( foreman_sync_plan_products_redhat8_sat_main | default([]) if foreman_enable_redhat8_sat | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_sat611 | default([]) if foreman_enable_redhat8_sat611 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_sat612 | default([]) if foreman_enable_redhat8_sat612 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_sat613 | default([]) if foreman_enable_redhat8_sat613 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_sat614 | default([]) if foreman_enable_redhat8_sat614 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_sat615 | default([]) if foreman_enable_redhat8_sat615 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_sat616 | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
+  }}"
 

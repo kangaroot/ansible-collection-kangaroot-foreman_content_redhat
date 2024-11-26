@@ -1,92 +1,257 @@
 ---
 # noqa: var-naming[no-role-prefix]
 
-foreman_content_credentials_redhat8_aap: []
+foreman_content_credentials_redhat8_aap21: []
+foreman_content_credentials_redhat8_aap22: []
+foreman_content_credentials_redhat8_aap23: []
+foreman_content_credentials_redhat8_aap24: []
+foreman_content_credentials_redhat8_aap25: []
+foreman_content_credentials_redhat8_aap_ah42: []
 
-foreman_products_redhat8_aap:
+foreman_content_credentials_redhat8_aap_main: []
+foreman_content_credentials_redhat8_aap: "{{ ( foreman_content_credentials_redhat8_aap_main | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+  union( foreman_content_credentials_redhat8_aap21 | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_aap22 | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_aap23 | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_aap24 | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_aap25 | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+  union( foreman_content_credentials_redhat8_aap_ah42 | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+  }}"
+
+
+foreman_products_redhat8_aap21:
   - name: Red Hat Ansible Automation Platform
-    organization: "{{ foreman_organization_redhat8_aap }}"
+    organization: "{{ foreman_organization_redhat8_aap21 }}"
     repository_sets:
       # Red Hat Ansible Automation Platform 2.1 for RHEL 8 x86_64
       - name: Red Hat Ansible Automation Platform 2.1 for RHEL 8 x86_64 (RPMs)
         # basearch: noarch
         label: ansible-automation-platform-2.1-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_aap }}"
+        organization: "{{ foreman_organization_redhat8_aap21 }}"
+
+foreman_products_redhat8_aap22:
+  - name: Red Hat Ansible Automation Platform
+    organization: "{{ foreman_organization_redhat8_aap22 }}"
+    repository_sets:
       # Red Hat Ansible Automation Platform 2.2 for RHEL 8 x86_64
       - name: Red Hat Ansible Automation Platform 2.2 for RHEL 8 x86_64 (RPMs)
         # basearch: noarch
         label: ansible-automation-platform-2.2-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_aap }}"
+        organization: "{{ foreman_organization_redhat8_aap22 }}"
+
+foreman_products_redhat8_aap23:
+  - name: Red Hat Ansible Automation Platform
+    organization: "{{ foreman_organization_redhat8_aap23 }}"
+    repository_sets:
       # Red Hat Ansible Automation Platform 2.3 for RHEL 8 x86_64
       - name: Red Hat Ansible Automation Platform 2.3 for RHEL 8 x86_64 (RPMs)
         # basearch: noarch
         label: ansible-automation-platform-2.3-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_aap }}"
+        organization: "{{ foreman_organization_redhat8_aap23 }}"
 
+foreman_products_redhat8_aap24:
+  - name: Red Hat Ansible Automation Platform
+    organization: "{{ foreman_organization_redhat8_aap24 }}"
+    repository_sets:
+      # Red Hat Ansible Automation Platform 2.4 for RHEL 8 x86_64
+      - name: Red Hat Ansible Automation Platform 2.4 for RHEL 8 x86_64 (RPMs)
+        # basearch: noarch
+        label: ansible-automation-platform-2.4-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_aap24 }}"
+
+foreman_products_redhat8_aap25:
+  - name: Red Hat Ansible Automation Platform
+    organization: "{{ foreman_organization_redhat8_aap25 }}"
+    repository_sets:
+      # Red Hat Ansible Automation Platform 2.5 for RHEL 8 x86_64
+      - name: Red Hat Ansible Automation Platform 2.5 for RHEL 8 x86_64 (RPMs)
+        # basearch: noarch
+        label: ansible-automation-platform-2.5-for-rhel-8-x86_64-rpms
+        organization: "{{ foreman_organization_redhat8_aap25 }}"
+
+foreman_products_redhat8_aap_ah42:
+  - name: Red Hat Ansible Automation Platform
+    organization: "{{ foreman_organization_redhat8_aap_ah42 }}"
+    repository_sets:
       # Red Hat Automation Hub 4.2 for RHEL 8 x86_64 RPMs
       - name: Red Hat Automation Hub 4.2 for RHEL 8 x86_64 (RPMs)
         # basearch: noarch
         label: automation-hub-4.2-for-rhel-8-x86_64-rpms
-        organization: "{{ foreman_organization_redhat8_aap }}"
+        organization: "{{ foreman_organization_redhat8_aap_ah42 }}"
 
-foreman_content_views_redhat8_aap:
+foreman_products_redhat8_aap_main: []
+foreman_products_redhat8_aap: "{{ ( foreman_products_redhat8_aap_main | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+  union( foreman_products_redhat8_aap21 | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+  union( foreman_products_redhat8_aap22 | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+  union( foreman_products_redhat8_aap23 | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+  union( foreman_products_redhat8_aap24 | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+  union( foreman_products_redhat8_aap25 | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+  union( foreman_products_redhat8_aap_ah42 | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+  }}"
+
+
+foreman_content_views_redhat8_aap21:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_21"
-    organization: "{{ foreman_organization_redhat8_aap }}"
+    organization: "{{ foreman_organization_redhat8_aap21 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Ansible Automation Platform 2.1 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Ansible Automation Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap }}"
+      - name: Red Hat Ansible Automation Platform 2.1 for RHEL 8 x86_64 RPMs
+        product: Red Hat Ansible Automation Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap21 }}"
+
+foreman_content_views_redhat8_aap22:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_22"
-    organization: "{{ foreman_organization_redhat8_aap }}"
+    organization: "{{ foreman_organization_redhat8_aap22 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Ansible Automation Platform 2.2 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Ansible Automation Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap }}"
+      - name: Red Hat Ansible Automation Platform 2.2 for RHEL 8 x86_64 RPMs
+        product: Red Hat Ansible Automation Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap22 }}"
+
+foreman_content_views_redhat8_aap23:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_23"
-    organization: "{{ foreman_organization_redhat8_aap }}"
+    organization: "{{ foreman_organization_redhat8_aap23 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Ansible Automation Platform 2.3 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Ansible Automation Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap }}"
+      - name: Red Hat Ansible Automation Platform 2.3 for RHEL 8 x86_64 RPMs
+        product: Red Hat Ansible Automation Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap23 }}"
 
+foreman_content_views_redhat8_aap24:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_24"
+    organization: "{{ foreman_organization_redhat8_aap24 }}"
+    repositories:
+      - name: Red Hat Ansible Automation Platform 2.4 for RHEL 8 x86_64 RPMs
+        product: Red Hat Ansible Automation Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap24 }}"
+
+foreman_content_views_redhat8_aap25:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_25"
+    organization: "{{ foreman_organization_redhat8_aap25 }}"
+    repositories:
+      - name: Red Hat Ansible Automation Platform 2.5 for RHEL 8 x86_64 RPMs
+        product: Red Hat Ansible Automation Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap25 }}"
+
+foreman_content_views_redhat8_aap_ah42:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_automation_hub_42"
-    organization: "{{ foreman_organization_redhat8_aap }}"
+    organization: "{{ foreman_organization_redhat8_aap_ah42 }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat Automation Hub 4.2 for RHEL 8 x86_64 RPMs"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat Ansible Automation Platform'"
-    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap }}"
+      - name: Red Hat Automation Hub 4.2 for RHEL 8 x86_64 RPMs
+        product: Red Hat Ansible Automation Platform
+    allow_promote: "{{ foreman_cv_allow_promote_redhat8_aap_ah42 }}"
 
-foreman_composite_content_views_redhat8_aap:
+foreman_content_views_redhat8_aap_main: []
+foreman_content_views_redhat8_aap: "{{ ( foreman_content_views_redhat8_aap_main | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+  union( foreman_content_views_redhat8_aap21 | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+  union( foreman_content_views_redhat8_aap22 | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+  union( foreman_content_views_redhat8_aap23 | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+  union( foreman_content_views_redhat8_aap24 | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+  union( foreman_content_views_redhat8_aap25 | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+  union( foreman_content_views_redhat8_aap_ah42 | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+  }}"
+
+
+foreman_composite_content_views_redhat8_aap21: []
+foreman_composite_content_views_redhat8_aap22: []
+foreman_composite_content_views_redhat8_aap23: []
+foreman_composite_content_views_redhat8_aap24: []
+foreman_composite_content_views_redhat8_aap25: []
+foreman_composite_content_views_redhat8_aap_ah42: []
+
+foreman_composite_content_views_redhat8_aap21_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_21"
+    latest: true
+
+foreman_composite_content_views_redhat8_aap22_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_22"
+    latest: true
+
+foreman_composite_content_views_redhat8_aap23_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_23"
+    latest: true
+
+foreman_composite_content_views_redhat8_aap24_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_24"
+    latest: true
+
+foreman_composite_content_views_redhat8_aap25_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_25"
+    latest: true
+
+foreman_composite_content_views_redhat8_aap_ah42_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_automation_hub_42"
+    latest: true
+
+foreman_composite_content_views_redhat8_aap_main_components:
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_baseos"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_appstream"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_supplementary"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
+    latest: true
+  - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_29"
+    latest: true
+
+foreman_composite_content_views_redhat8_aap_main:
   - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_aap"
     organization: "{{ foreman_organization_redhat8_aap }}"
     composite: True
     allow_promote: "{{ foreman_ccv_allow_promote_redhat8_aap }}"
     auto_publish: "{{ foreman_ccv_auto_publish_redhat8_aap }}"
-    components:
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_baseos"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_appstream"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_supplementary"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_sat_client_6"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_2"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_29"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_21"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_22"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_ansible_automation_platform_23"
-        latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel8_automation_hub_42"
-        latest: true
+    components: "{{ ( foreman_composite_content_views_redhat8_aap_main_components | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_aap21_components | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_aap22_components | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_aap23_components | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_aap24_components | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_aap25_components | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+      union( foreman_composite_content_views_redhat8_aap_ah42_components | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+    }}"
 
-foreman_operatingsystems_redhat8_aap: []
+foreman_composite_content_views_redhat8_aap: "{{ ( foreman_composite_content_views_redhat8_aap_main | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_aap21 | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_aap22 | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_aap23 | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_aap24 | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_aap25 | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+  union( foreman_composite_content_views_redhat8_aap_ah42 | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+  }}"
 
-foreman_installation_media_redhat8_aap: []
+
+foreman_operatingsystems_redhat8_aap21: []
+foreman_operatingsystems_redhat8_aap22: []
+foreman_operatingsystems_redhat8_aap23: []
+foreman_operatingsystems_redhat8_aap24: []
+foreman_operatingsystems_redhat8_aap25: []
+foreman_operatingsystems_redhat8_aap_ah42: []
+
+foreman_operatingsystems_redhat8_aap_main: []
+foreman_operatingsystems_redhat8_aap: "{{ ( foreman_operatingsystems_redhat8_aap_main | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_aap21 | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_aap22 | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_aap23 | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_aap24 | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_aap25 | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+  union( foreman_operatingsystems_redhat8_aap_ah42 | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+  }}"
+
+
+foreman_installation_media_redhat8_aap21: []
+foreman_installation_media_redhat8_aap22: []
+foreman_installation_media_redhat8_aap23: []
+foreman_installation_media_redhat8_aap24: []
+foreman_installation_media_redhat8_aap25: []
+foreman_installation_media_redhat8_aap_ah42: []
+
+foreman_installation_media_redhat8_aap_main: []
+foreman_installation_media_redhat8_aap: "{{ ( foreman_installation_media_redhat8_aap_main | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+  union( foreman_installation_media_redhat8_aap21 | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+  union( foreman_installation_media_redhat8_aap22 | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+  union( foreman_installation_media_redhat8_aap23 | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+  union( foreman_installation_media_redhat8_aap24 | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+  union( foreman_installation_media_redhat8_aap25 | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+  union( foreman_installation_media_redhat8_aap_ah42 | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+  }}"
+
 
 # Refer to https://access.redhat.com/solutions/125873 for pool ids
 foreman_activation_keys_defaults: &foreman_activation_keys_defaults
@@ -116,7 +281,50 @@ foreman_activation_keys_defaults_el8: &foreman_activation_keys_defaults_el8
   #   - name: "Extra Packages for Enterprise Linux"
   release_version: 8
 
-foreman_activation_keys_redhat8_aap:
+foreman_activation_keys_redhat8_aap21: []
+foreman_activation_keys_redhat8_aap22: []
+foreman_activation_keys_redhat8_aap23: []
+foreman_activation_keys_redhat8_aap24: []
+foreman_activation_keys_redhat8_aap25: []
+foreman_activation_keys_redhat8_aap_ah42: []
+
+foreman_activation_keys_redhat8_aap21_content_overrides:
+  - label: ansible-automation-platform-2.1-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_aap22_content_overrides:
+  - label: ansible-automation-platform-2.2-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_aap23_content_overrides:
+  - label: ansible-automation-platform-2.3-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_aap24_content_overrides:
+  - label: ansible-automation-platform-2.4-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_aap25_content_overrides:
+  - label: ansible-automation-platform-2.5-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_aap_ah42_content_overrides:
+  - label: automation-hub-4.2-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_aap_main_content_overrides:
+  - label: rhel-8-for-x86_64-baseos-rpms
+    override: default
+  - label: rhel-8-for-x86_64-appstream-rpms
+    override: default
+  - label: rhel-8-for-x86_64-supplementary-rpms
+    override: default
+  - label: ansible-2-for-rhel-8-x86_64-rpms
+    override: default
+  - label: ansible-2.9-for-rhel-8-x86_64-rpms
+    override: default
+
+foreman_activation_keys_redhat8_aap_main:
   - name: "{{ foreman_ak_prefix | default('ak_') }}{{ foreman_ak_name_prefix | default('') }}rhel8_aap"
     organization: "{{ foreman_organization_redhat8_aap }}"
     content_view: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_aap"
@@ -125,30 +333,62 @@ foreman_activation_keys_redhat8_aap:
     #   - name: "Red Hat Ansible Engine"
     #   - name: "Red Hat Ansible Automation Platform"
     #   - name: "Red Hat Enterprise Linux for x86_64"
-    content_overrides:
-      - label: rhel-8-for-x86_64-baseos-rpms
-        override: default
-      - label: rhel-8-for-x86_64-appstream-rpms
-        override: default
-      - label: rhel-8-for-x86_64-supplementary-rpms
-        override: default
-      - label: satellite-client-6-for-rhel-8-x86_64-rpms
-        override: default
-      - label: ansible-2-for-rhel-8-x86_64-rpms
-        override: default
-      - label: ansible-2.9-for-rhel-8-x86_64-rpms
-        override: default
-      - label: ansible-automation-platform-2.1-for-rhel-8-x86_64-rpms
-        override: default
-      - label: ansible-automation-platform-2.2-for-rhel-8-x86_64-rpms
-        override: default
-      - label: ansible-automation-platform-2.3-for-rhel-8-x86_64-rpms
-        override: default
-      - label: automation-hub-4.2-for-rhel-8-x86_64-rpms
-        override: default
+    content_overrides: "{{ ( foreman_activation_keys_redhat8_aap_main_content_overrides | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+      union( foreman_activation_keys_redhat8_aap21_content_overrides | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_aap22_content_overrides | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_aap23_content_overrides | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_aap24_content_overrides | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_aap25_content_overrides | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+      union( foreman_activation_keys_redhat8_aap_ah42_content_overrides | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+    }}"
 
-foreman_sync_plan_products_redhat8_aap:
+foreman_activation_keys_redhat8_aap: "{{ ( foreman_activation_keys_redhat8_aap_main | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+  union( foreman_activation_keys_redhat8_aap21 | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_aap22 | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_aap23 | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_aap24 | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_aap25 | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+  union( foreman_activation_keys_redhat8_aap_ah42 | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+  }}"
+
+
+foreman_sync_plan_products_redhat8_aap21:
   - Red Hat Ansible Engine
   - Red Hat Ansible Automation Platform
   - Red Hat Enterprise Linux for x86_64
+
+foreman_sync_plan_products_redhat8_aap22:
+  - Red Hat Ansible Engine
+  - Red Hat Ansible Automation Platform
+  - Red Hat Enterprise Linux for x86_64
+
+foreman_sync_plan_products_redhat8_aap23:
+  - Red Hat Ansible Engine
+  - Red Hat Ansible Automation Platform
+  - Red Hat Enterprise Linux for x86_64
+
+foreman_sync_plan_products_redhat8_aap24:
+  - Red Hat Ansible Engine
+  - Red Hat Ansible Automation Platform
+  - Red Hat Enterprise Linux for x86_64
+
+foreman_sync_plan_products_redhat8_aap25:
+  - Red Hat Ansible Engine
+  - Red Hat Ansible Automation Platform
+  - Red Hat Enterprise Linux for x86_64
+
+foreman_sync_plan_products_redhat8_aap_ah42:
+  - Red Hat Ansible Engine
+  - Red Hat Ansible Automation Platform
+  - Red Hat Enterprise Linux for x86_64
+
+foreman_sync_plan_products_redhat8_aap_main: []
+foreman_sync_plan_products_redhat8_aap: "{{ ( foreman_sync_plan_products_redhat8_aap_main | default([]) if foreman_enable_redhat8_aap | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_aap21 | default([]) if foreman_enable_redhat8_aap21 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_aap22 | default([]) if foreman_enable_redhat8_aap22 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_aap23 | default([]) if foreman_enable_redhat8_aap23 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_aap24 | default([]) if foreman_enable_redhat8_aap24 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_aap25 | default([]) if foreman_enable_redhat8_aap25 | bool else [] ) |
+  union( foreman_sync_plan_products_redhat8_aap_ah42 | default([]) if foreman_enable_redhat8_aap_ah42 | bool else [] )
+  }}"
 

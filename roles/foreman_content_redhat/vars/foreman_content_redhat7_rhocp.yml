@@ -27,20 +27,20 @@ foreman_content_views_redhat7_rhocp:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_rhocp_410"
     organization: "{{ foreman_organization_redhat7_rhocp }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.10 RPMs x86_64"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+      - name: Red Hat OpenShift Container Platform 4.10 RPMs x86_64
+        product: Red Hat OpenShift Container Platform
     allow_promote: "{{ foreman_cv_allow_promote_redhat7_rhocp }}"
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_rhocp_411"
     organization: "{{ foreman_organization_redhat7_rhocp }}"
     repositories:
-      - name: "{{ foreman_repo_name_prefix | default('') }}Red Hat OpenShift Container Platform 4.11 RPMs x86_64"
-        product: "{{ foreman_product_name_prefix | default('') }}'Red Hat OpenShift Container Platform'"
+      - name: Red Hat OpenShift Container Platform 4.11 RPMs x86_64
+        product: Red Hat OpenShift Container Platform
     allow_promote: "{{ foreman_cv_allow_promote_redhat7_rhocp }}"
   # - name: "{{ foreman_cv_prefix | default('cv_') }}rhel7_rhocp_412"
   #   organization: "{{ foreman_organization_redhat7_rhocp }}"
   #   repositories:
   #     - name: Red Hat OpenShift Container Platform 4.12 RPMs x86_64
-  #       product: 'Red Hat OpenShift Container Platform'
+  #       product: Red Hat OpenShift Container Platform
   #   allow_promote: "{{ foreman_cv_allow_promote_redhat7_rhocp }}"
 
 foreman_composite_content_views_redhat7_rhocp:
@@ -70,7 +70,7 @@ foreman_composite_content_views_redhat7_rhocp:
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_rhocp_411"
         latest: true
-      # - content_view: "{{ foreman_cv_prefix | default('cv_') }}rhel7_rhocp_412"
+      # - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel7_rhocp_412"
       #   latest: true
 
 foreman_operatingsystems_redhat7_rhocp: []
