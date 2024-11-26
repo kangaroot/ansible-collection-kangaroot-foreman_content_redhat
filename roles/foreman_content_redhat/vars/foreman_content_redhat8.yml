@@ -388,7 +388,7 @@ foreman_operatingsystems_redhat8:
     <<: *foreman_operatingsystems_defaults
   - name: "RedHat"
     major: "8"
-    minor: "9"
+    minor: "10"
     description: "RHEL 8.10"
     default_templates: "{{ foreman_operatingsystems_redhat810_default_templates | default( foreman_operatingsystems_redhat8_default_templates | default( foreman_operatingsystems_redhat_default_templates | default( foreman_operatingsystems_el_default_templates | default([]) ) ) ) }}"
     <<: *foreman_operatingsystems_defaults
