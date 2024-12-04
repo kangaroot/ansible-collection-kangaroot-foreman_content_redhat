@@ -10,12 +10,12 @@ foreman_products_redhat7_sat:
       # Red Hat Satellite 6.10 for RHEL 7 Server RPMs x86_64
       - name: Red Hat Satellite 6.10 (for RHEL 7 Server) (RPMs)
         basearch: x86_64
-        # label: rhel-7-server-satellite-6.10-rpms
+        label: rhel-7-server-satellite-6.10-rpms
         organization: "{{ foreman_organization_redhat7_sat }}"
       # Red Hat Satellite 6.11 for RHEL 7 Server RPMs x86_64
       - name: Red Hat Satellite 6.11 (for RHEL 7 Server) (RPMs)
         basearch: x86_64
-        # label: rhel-7-server-satellite-6.11-rpms
+        label: rhel-7-server-satellite-6.11-rpms
         organization: "{{ foreman_organization_redhat7_sat }}"
 
   - name: Red Hat Satellite Capsule
@@ -24,12 +24,12 @@ foreman_products_redhat7_sat:
       # Red Hat Satellite Capsule 6.10 for RHEL 7 Server RPMs x86_64
       - name: Red Hat Satellite Capsule 6.10 (for RHEL 7 Server) (RPMs)
         basearch: x86_64
-        # label: rhel-7-server-satellite-capsule-6.10-rpms
+        label: rhel-7-server-satellite-capsule-6.10-rpms
         organization: "{{ foreman_organization_redhat7_sat }}"
       # Red Hat Satellite Capsule 6.11 for RHEL 7 Server RPMs x86_64
       - name: Red Hat Satellite Capsule 6.11 (for RHEL 7 Server) (RPMs)
         basearch: x86_64
-        # label: rhel-7-server-satellite-capsule-6.11-rpms
+        label: rhel-7-server-satellite-capsule-6.11-rpms
         organization: "{{ foreman_organization_redhat7_sat }}"
 
 foreman_content_views_redhat7_sat:

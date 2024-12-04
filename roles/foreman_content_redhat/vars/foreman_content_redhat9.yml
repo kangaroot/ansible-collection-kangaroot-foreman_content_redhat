@@ -30,11 +30,13 @@ foreman_products_redhat9:
       # Red Hat Satellite Client 6 for RHEL 9 x86_64 RPMs
       - name: Red Hat Satellite Client 6 for RHEL 9 x86_64 (RPMs)
         # basearch: noarch
+        # releasever: '9'
         # label: satellite-client-6-for-rhel-9-x86_64-rpms
         organization: "{{ foreman_organization_redhat9 }}"
-      # Red Hat Satellite 6 Client 2 for RHEL 9 x86_64 RPMs
-      - name: Red Hat Satellite 6 Client 2 for RHEL 9 x86_64 (RPMs)
+      # Red Hat Satellite 6 Client 2 for RHEL 9 x86_64 RPMS
+      - name: Red Hat Satellite 6 Client 2 for RHEL 9 x86_64 (RPMS)
         # basearch: noarch
+        # releasever: '9'
         # label: satellite-6-client-2-for-rhel-9-x86_64-rpms
         organization: "{{ foreman_organization_redhat9 }}"
 
@@ -47,7 +49,7 @@ foreman_products_redhat9:
 
       # Red Hat Satellite Maintenance 6.16 for RHEL 9 x86_64 RPMs
       - name: Red Hat Satellite Maintenance 6.16 for RHEL 9 x86_64 (RPMs)
-        # basearch: x86_64
+        # basearch: noarch
         # releasever: '9'
         # label: satellite-maintenance-6.16-for-rhel-9-x86_64-rpms
         organization: "{{ foreman_organization_redhat9 }}"
@@ -82,18 +84,18 @@ foreman_content_views_redhat9:
   - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_6_client_2"
     organization: "{{ foreman_organization_redhat9 }}"
     repositories:
-      - name: Red Hat Satellite 6 Client 2 for RHEL 9 x86_64 RPMs
+      - name: Red Hat Satellite 6 Client 2 for RHEL 9 x86_64 RPMS
         product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat9 }}"
 
-  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_utils_6_16"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_utils_616"
     organization: "{{ foreman_organization_redhat9 }}"
     repositories:
       - name: Red Hat Satellite Utils 6.16 for RHEL 9 x86_64 RPMs
         product: Red Hat Enterprise Linux for x86_64
     allow_promote: "{{ foreman_cv_allow_promote_redhat9 }}"
 
-  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_maint_6_16"
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_maint_616"
     organization: "{{ foreman_organization_redhat9 }}"
     repositories:
       - name: Red Hat Satellite Maintenance 6.16 for RHEL 9 x86_64 RPMs
@@ -117,9 +119,9 @@ foreman_composite_content_views_redhat9:
         latest: true
       - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_6_client_2"
         latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_utils_6_16"
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_utils_616"
         latest: true
-      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_maint_6_16"
+      - content_view: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}rhel9_sat_maint_616"
         latest: true
 
 

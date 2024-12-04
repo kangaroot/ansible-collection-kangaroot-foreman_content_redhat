@@ -25,7 +25,7 @@ foreman_products_redhat8_sat611:
       # Red Hat Satellite 6.11 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite 6.11 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-6.11-for-rhel-8-x86_64-rpms
+        label: satellite-6.11-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat611 }}"
 
   - name: Red Hat Satellite Capsule
@@ -34,7 +34,7 @@ foreman_products_redhat8_sat611:
       # Red Hat Satellite Capsule 6.11 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Capsule 6.11 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-capsule-6.11-for-rhel-8-x86_64-rpms
+        label: satellite-capsule-6.11-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat611 }}"
 
 foreman_products_redhat8_sat612:
@@ -44,7 +44,7 @@ foreman_products_redhat8_sat612:
       # Red Hat Satellite 6.12 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite 6.12 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-6.12-for-rhel-8-x86_64-rpms
+        label: satellite-6.12-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat612 }}"
 
   - name: Red Hat Satellite Capsule
@@ -53,7 +53,7 @@ foreman_products_redhat8_sat612:
       # Red Hat Satellite Capsule 6.12 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Capsule 6.12 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-capsule-6.12-for-rhel-8-x86_64-rpms
+        label: satellite-capsule-6.12-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat612 }}"
 
 foreman_products_redhat8_sat613:
@@ -63,7 +63,7 @@ foreman_products_redhat8_sat613:
       # Red Hat Satellite 6.13 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite 6.13 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-6.13-for-rhel-8-x86_64-rpms
+        label: satellite-6.13-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat613 }}"
 
   - name: Red Hat Satellite Capsule
@@ -72,7 +72,7 @@ foreman_products_redhat8_sat613:
       # Red Hat Satellite Capsule 6.13 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Capsule 6.13 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-capsule-6.13-for-rhel-8-x86_64-rpms
+        label: satellite-capsule-6.13-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat613 }}"
 
 foreman_products_redhat8_sat614:
@@ -82,7 +82,7 @@ foreman_products_redhat8_sat614:
       # Red Hat Satellite 6.14 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite 6.14 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-6.14-for-rhel-8-x86_64-rpms
+        label: satellite-6.14-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat614 }}"
 
   - name: Red Hat Satellite Capsule
@@ -91,7 +91,7 @@ foreman_products_redhat8_sat614:
       # Red Hat Satellite Capsule 6.14 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Capsule 6.14 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-capsule-6.14-for-rhel-8-x86_64-rpms
+        label: satellite-capsule-6.14-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat614 }}"
 
 foreman_products_redhat8_sat615:
@@ -101,7 +101,7 @@ foreman_products_redhat8_sat615:
       # Red Hat Satellite 6.15 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite 6.15 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-6.15-for-rhel-8-x86_64-rpms
+        label: satellite-6.15-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat615 }}"
 
   - name: Red Hat Satellite Capsule
@@ -110,7 +110,7 @@ foreman_products_redhat8_sat615:
       # Red Hat Satellite Capsule 6.15 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Capsule 6.15 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-capsule-6.15-for-rhel-8-x86_64-rpms
+        label: satellite-capsule-6.15-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat615 }}"
 
 foreman_products_redhat8_sat616:
@@ -120,7 +120,7 @@ foreman_products_redhat8_sat616:
       # Red Hat Satellite 6.16 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite 6.16 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-6.16-for-rhel-8-x86_64-rpms
+        label: satellite-6.16-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat616 }}"
 
   - name: Red Hat Satellite Capsule
@@ -129,7 +129,7 @@ foreman_products_redhat8_sat616:
       # Red Hat Satellite Capsule 6.16 for RHEL 8 x86_64 RPMs
       - name: Red Hat Satellite Capsule 6.16 for RHEL 8 x86_64 (RPMs)
         basearch: x86_64
-        # label: satellite-capsule-6.16-for-rhel-8-x86_64-rpms
+        label: satellite-capsule-6.16-for-rhel-8-x86_64-rpms
         organization: "{{ foreman_organization_redhat8_sat616 }}"
 
 
@@ -313,7 +313,7 @@ foreman_composite_content_views_redhat8_sat_main_compents:
     latest: true
 
 foreman_composite_content_views_redhat8_sat_main:
-  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_satellite_6_16"
+  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_satellite_616"
     organization: "{{ foreman_organization_redhat8_sat }}"
     composite: True
     allow_promote: "{{ foreman_ccv_allow_promote_redhat8_sat }}"
@@ -327,7 +327,7 @@ foreman_composite_content_views_redhat8_sat_main:
       union( foreman_composite_content_views_redhat8_sat616_compents | default([]) if foreman_enable_redhat8_sat616 | bool else [] )
     }}"
 
-  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_capsule_6_16"
+  - name: "{{ foreman_ccv_prefix | default('ccv_') }}{{ foreman_ccv_name_prefix | default('') }}rhel8_capsule_616"
     organization: "{{ foreman_organization_redhat8_sat }}"
     composite: True
     allow_promote: "{{ foreman_ccv_allow_promote_redhat8_sat }}"
